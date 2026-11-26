@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#faf5ec">
+  <meta name="description" content="Design System da Novelo: identidade, propósito, experiência, personagens e curadoria de uma rede que reconhece o cuidado.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Novelo · Design System">
+  <meta property="og:description" content="O trabalho se tece coletivamente. Uma identidade feita de gente, vínculos e fios.">
+  <title>Novelo · Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="colorbar" aria-hidden="true"></div>
+<header class="site-header" id="topo">
+  <div class="container header-inner">
+    <a class="brand" href="#topo" aria-label="Novelo · início"><img src="https://raw.githubusercontent.com/carolinefreire/novelo/main/public/logo-novelo.png" alt="Novelo" width="150" height="82"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="menu" aria-label="Navegação principal">
+      <a href="#proposito">Nossa ideia</a><a href="#identidade">Identidade</a><a href="#personagens">Personagens</a><a href="#experiencia">Experiência</a><a href="#acervo">Acervo</a>
+      <a class="nav-admin" href="curadoria.html">Curadoria <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+  <section class="hero section" aria-labelledby="hero-title">
+    <div class="hero-ambient hero-ambient-one" aria-hidden="true"></div>
+    <div class="hero-ambient hero-ambient-two" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> O universo visual da Novelo</span>
+        <h1 id="hero-title">O futuro é feito de <em>gente.</em></h1>
+        <p class="hero-intro">Uma identidade criada para aproximar pessoas, empresas e oportunidades. Porque o trabalho se tece coletivamente, e cada fio tem valor.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#proposito">Conheça a ideia <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#experiencia">Explore a experiência</a></div>
+        <div class="hero-meta"><span><strong>01</strong> cuidado com vida real</span><span><strong>02</strong> reciprocidade</span><span><strong>03</strong> conexão</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-card"><span class="hero-art-kicker">ENTRE GERAÇÕES, ENTRE FIOS</span><img src="assets/tres-geracoes-tecendo-juntas.svg" alt="Três gerações se conectam pelo cuidado e pelo crochê, em uma cena de amigurumi." width="540" height="540" fetchpriority="high"><div class="hero-card-tag"><span class="rainbow-dot" aria-hidden="true"></span> Cuidado compartilhado</div></div>
+        <div class="floating-label one">Cada fio importa.</div><div class="floating-label two">Ninguém constrói sozinho.</div>
+      </div>
+    </div>
+    <div class="hero-ribbon container"><img src="https://raw.githubusercontent.com/carolinefreire/novelo/main/public/fio-coracoes.png" alt="" aria-hidden="true"></div>
+  </section>
+
+  <section class="section section-purpose" id="proposito" aria-labelledby="purpose-title">
+    <div class="container">
+      <div class="section-intro"><span class="kicker">01 / A ideia</span><h2 id="purpose-title">O cuidado sustenta o mundo.<br><span class="gradient-text">O trabalho precisa reconhecê-lo.</span></h2></div>
+      <div class="purpose-grid">
+        <div class="manifesto">
+          <p>Houve um tempo em que muitos ofícios atravessavam gerações. Aprendia-se com mães, pais, vizinhos, mestres. Entre ferramentas e histórias, compartilhavam-se saberes e redes de apoio.</p>
+          <p>Hoje temos tecnologia para conectar o mundo inteiro. Ainda assim, muitas vezes transformamos pessoas em currículos, histórias em números e tempo em produtividade.</p>
+          <p>Se o cuidado sustenta o mundo, por que o mundo do trabalho insiste em ignorá-lo?</p>
+          <p><strong>A Novelo nasce para fazer diferente.</strong> Para criar novos elos entre pessoas, empresas e oportunidades, reconhecendo que nossas vidas são diferentes, mas nossos caminhos se cruzam.</p>
+          <a href="https://github.com/carolinefreire/novelo/blob/main/src/routes/manifesto.tsx" target="_blank" rel="noopener noreferrer" class="text-link">Conheça a origem do manifesto <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="principles">
+          <article class="principle peach"><span class="principle-num">01</span><h3>Trabalho com vida real</h3><p>As rotinas são diferentes. As oportunidades precisam reconhecer essa diversidade.</p><span class="principle-shape" aria-hidden="true"></span></article>
+          <article class="principle butter"><span class="principle-num">02</span><h3>Oportunidades que consideram pessoas</h3><p>Competências, flexibilidade e respeito, além do currículo.</p><span class="principle-shape" aria-hidden="true"></span></article>
+          <article class="principle lavender"><span class="principle-num">03</span><h3>Uma rede que cuida e impulsiona</h3><p>Oportunidades nascem das relações, não de expectativas isoladas.</p><span class="principle-shape" aria-hidden="true"></span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-identity" id="identidade" aria-labelledby="identity-title">
+    <div class="container">
+      <div class="section-intro"><span class="kicker">02 / Identidade visual</span><h2 id="identity-title">Uma marca feita de <span class="gradient-text">encontros.</span></h2><p>Os fios multicoloridos representam trajetórias singulares que se cruzam. Texturas táteis, formas acolhedoras e uma linguagem visual humana.</p></div>
+      <div class="identity-grid">
+        <article class="identity-panel logo-panel"><div class="panel-head"><span>LOGOTIPO OFICIAL</span><span>01</span></div><img class="logo-showcase" src="https://raw.githubusercontent.com/carolinefreire/novelo/main/public/logo-novelo.png" alt="Logotipo original Novelo, com letras de fio multicolorido e símbolo de maleta." loading="lazy"><p>Usar o arquivo oficial, sem redesenho ou alterações improvisadas.</p></article>
+        <article class="identity-panel palette-panel"><div class="panel-head"><span>AS CORES DOS FIOS</span><span>02</span></div><div class="palette-swatch"><span style="--c:#e73b2f" title="Vermelho"></span><span style="--c:#fb8125" title="Laranja"></span><span style="--c:#f2ba2d" title="Amarelo"></span><span style="--c:#198962" title="Verde"></span><span style="--c:#3356b2" title="Azul"></span><span style="--c:#9134a3" title="Roxo"></span><span style="--c:#ec237d" title="Rosa"></span></div><div class="palette-gradient"></div><p>Diversidade, acolhimento, confiança, movimento, oportunidade e equilíbrio.</p></article>
+        <article class="identity-panel type-panel"><div class="panel-head"><span>TIPOGRAFIA</span><span>03</span></div><div class="type-example">Aa<span>Poppins</span></div><p>Moderna, acessível e com personalidade, utilizada nos materiais do aplicativo.</p></article>
+        <article class="identity-panel texture-panel"><div class="panel-head"><span>TEXTURAS REAIS</span><span>04</span></div><img src="https://raw.githubusercontent.com/carolinefreire/novelo/main/public/fio-coracoes.png" alt="Faixa oficial de fios coloridos formando corações." loading="lazy"><p>Fibras visíveis e pontos de crochê. A textura faz parte da identidade.</p></article>
+      </div>
+      <div class="identity-note"><span aria-hidden="true">✳</span><p>Uma regra de identidade: <strong>nunca substituir o símbolo oficial por uma maletinha parecida</strong> nem trocar as artes em crochê por ilustrações planas.</p></div>
+    </div>
+  </section>
+
+  <section class="section section-characters" id="personagens" aria-labelledby="characters-title">
+    <div class="container"><div class="section-intro"><span class="kicker">03 / Personagens</span><h2 id="characters-title">Diversidade não é detalhe.<br><span class="gradient-text">É quem tece a rede.</span></h2><p>Personagens já aprovados, mantidos com seus arquivos originais. Cada trajetória tem rosto, autonomia e lugar na história.</p></div>
+      <div class="characters-grid">
+        <article class="person-card"><div class="person-image tone-peach"><img src="assets/joana_voluntaria.svg" alt="Joana, voluntária com síndrome de Down, em pé." loading="lazy"></div><div class="person-text"><h3>Joana</h3><p>Presença, identidade e protagonismo</p><span class="approval">Arte aprovada</span></div></article>
+        <article class="person-card"><div class="person-image tone-yellow"><img src="assets/rafael_voluntario.svg" alt="Rafael em cadeira de rodas com comunicação alternativa." loading="lazy"></div><div class="person-text"><h3>Rafael</h3><p>Comunicação e acessibilidade</p><span class="approval">Arte aprovada</span></div></article>
+        <article class="person-card"><div class="person-image tone-lavender"><img src="assets/lucia_voluntaria.svg" alt="Lúcia com bengala para deficiência visual." loading="lazy"></div><div class="person-text"><h3>Lúcia</h3><p>Experiência e pertencimento</p><span class="approval">Arte aprovada</span></div></article>
+        <article class="person-card"><div class="person-image tone-blue"><img src="assets/diego_voluntario.svg" alt="Diego com fones de ouvido." loading="lazy"></div><div class="person-text"><h3>Diego</h3><p>Diferenças que enriquecem</p><span class="approval">Arte aprovada</span></div></article>
+        <article class="person-card"><div class="person-image tone-mint"><img src="assets/marina_voluntaria.svg" alt="Marina com dispositivo de comunicação." loading="lazy"></div><div class="person-text"><h3>Marina</h3><p>Acesso à comunicação</p><span class="approval">Arte aprovada</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-experience" id="experiencia" aria-labelledby="experience-title">
+    <div class="container">
+      <div class="section-intro"><span class="kicker">04 / Experiência</span><h2 id="experience-title">Tecnologia para <span class="gradient-text">aproximar.</span></h2><p>Do cadastro ao encontro com uma oportunidade: a experiência procura respeitar as necessidades de cada pessoa e valorizar suas competências.</p></div>
+      <div class="journey-label"><span class="journey-label-dot"></span> Mockups conceituais baseados nos fluxos do aplicativo. Não são capturas das telas finais aprovadas.</div>
+      <div class="mockups-grid">
+        <article class="mockup"><div class="mockup-top"><span>01 / Boas-vindas</span><span>Conexão</span></div><div class="phone-shell"><div class="phone-screen welcome-screen"><div class="phone-status">9:41 <span>●●●</span></div><div class="phone-brand"><span class="phone-brand-title">novelo</span><small>o trabalho se tece coletivamente</small></div><div class="screen-shape" aria-hidden="true"><span class="shape-heart">♡</span></div><h4>Seu caminho merece oportunidades.</h4><p>Um lugar para conectar talentos, empresas e vida real.</p><div class="phone-cta">Começar</div></div></div><h3>Uma chegada acolhedora</h3><p>Linguagem direta, sem exigir que a pessoa se encaixe num modelo único.</p></article>
+        <article class="mockup"><div class="mockup-top"><span>02 / Perfil</span><span>Autonomia</span></div><div class="phone-shell"><div class="phone-screen profile-screen"><div class="phone-status">9:41 <span>●●●</span></div><div class="screen-topline">Meu perfil <span>⋯</span></div><div class="progress-pill">Seu perfil, suas escolhas</div><div class="screen-field"><small>Área de atuação</small><strong>Administração e apoio</strong></div><div class="screen-field"><small>Preferências</small><strong>Trabalho remoto · Flexível</strong></div><div class="screen-field"><small>Competências</small><strong>Organização · Comunicação</strong></div><div class="screen-tags"><span>Habilidades</span><span>Vida real</span><span>Autonomia</span></div><div class="phone-cta">Salvar perfil</div></div></div><h3>O perfil é da pessoa</h3><p>Preferências, competências, privacidade e escolha sobre compartilhamento.</p></article>
+        <article class="mockup"><div class="mockup-top"><span>03 / Oportunidades</span><span>Reciprocidade</span></div><div class="phone-shell"><div class="phone-screen opportunity-screen"><div class="phone-status">9:41 <span>●●●</span></div><div class="screen-topline">Oportunidades <span>♡</span></div><div class="screen-subtitle">Encontros possíveis para você</div><div class="job-card"><div class="job-symbol">✳</div><h4>Assistente administrativa</h4><p>Empresa verificada · Remoto</p><div class="job-match">Compatibilidade de habilidades <b>84%</b></div><div class="job-meter"><span></span></div><div class="job-tags"><span>Flexibilidade</span><span>Remoto</span></div></div><div class="job-card small-job"><h4>Atendimento digital</h4><p>Modelo híbrido · Oportunidade</p></div><div class="phone-cta">Conhecer oportunidade</div></div></div><h3>Match com reciprocidade</h3><p>Oportunidades compatíveis e interesse compartilhado, respeitando a privacidade.</p></article>
+      </div>
+      <div class="experience-more"><p><strong>Uma experiência ainda em desenvolvimento.</strong> As telas acima demonstram conceitos e não substituem os mockups originais. O acervo completo de propostas será incorporado após curadoria e verificação individual.</p><a href="https://github.com/carolinefreire/novelo" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Conhecer o aplicativo <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+
+  <section class="section section-gallery" id="acervo" aria-labelledby="gallery-title">
+    <div class="container">
+      <div class="section-intro"><span class="kicker">05 / Acervo oficial</span><h2 id="gallery-title">Tudo tem um fio <span class="gradient-text">de origem.</span></h2><p>Uma galeria pública de recursos com aprovação confirmada, identificados pelo nome e pela proveniência. Clique para ampliar sem abrir código SVG.</p></div>
+      <div class="gallery-toolbar"><div class="filter-pills" role="group" aria-label="Filtrar acervo"><button type="button" class="chip active" data-filter="Todos" aria-pressed="true">Todos</button><button type="button" class="chip" data-filter="Personagens" aria-pressed="false">Personagens</button><button type="button" class="chip" data-filter="Cenas" aria-pressed="false">Cenas</button><button type="button" class="chip" data-filter="Marca" aria-pressed="false">Marca</button><button type="button" class="chip" data-filter="Elementos" aria-pressed="false">Elementos</button></div><span id="gallery-count" aria-live="polite"></span></div>
+      <div class="gallery-grid" id="gallery-grid" aria-live="polite"><p>Carregando o acervo aprovado…</p></div>
+      <div class="acervo-note"><strong>Sobre a Família Novelo (Issue #10)</strong><p>A versão final foi aprovada. Seu arquivo binário ainda precisa ser incorporado ao repositório para publicação. A aprovação foi registrada no catálogo, sem inventar uma substituição.</p></div>
+    </div>
+  </section>
+
+  <section class="section section-governance" id="governanca">
+    <div class="container governance-grid">
+      <div><span class="kicker">06 / Identidade em evolução</span><h2>Um Design System vivo.<br><span class="gradient-text">Com memória.</span></h2><p>Uma marca cresce sem perder o que já foi aprovado. Guardamos a origem de cada personagem, a intenção das ilustrações e as decisões de revisão.</p><a href="curadoria.html" class="btn btn-primary">Entrar na curadoria <span aria-hidden="true">↗</span></a></div>
+      <div class="governance-cards"><div><span class="governance-icon">✓</span><h3>Aprovar</h3><p>Incorporar somente a versão escolhida, mantendo os originais.</p></div><div><span class="governance-icon">×</span><h3>Desaprovar</h3><p>Excluir o arquivo selecionado apenas quando seguro e autorizado.</p></div><div><span class="governance-icon">✎</span><h3>Ajustar</h3><p>Registrar o comentário junto à arte e apresentar a próxima versão para avaliação.</p></div></div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div><img src="https://raw.githubusercontent.com/carolinefreire/novelo/main/public/logo-novelo.png" alt="Novelo" width="160" loading="lazy"><p>O trabalho se tece coletivamente.</p></div><div><p>Design System · apresentação pública</p><a href="https://github.com/carolinefreire/ds_novelo">Repositório do Design System</a><a href="https://github.com/carolinefreire/novelo">Projeto Novelo</a></div></div><div class="container footer-bottom"><span>Novelo © <span id="year">2026</span></span><a href="#topo">Voltar ao topo ↑</a></div></footer>
+<dialog id="viewer" class="viewer" aria-label="Visualização ampliada"><div class="viewer-panel"><button class="viewer-close" type="button" aria-label="Fechar visualização">×</button><div class="viewer-media"><img alt="" id="viewer-img"></div><div class="viewer-info"><div><span id="viewer-cat"></span><h3 id="viewer-title"></h3><p id="viewer-caption"></p></div><a id="viewer-source" href="#" target="_blank" rel="noopener noreferrer">Ver origem ↗</a></div></div></dialog>
+</body></html>
