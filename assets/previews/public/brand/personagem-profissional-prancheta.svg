@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" role="img" aria-labelledby="t d"><title id="t">Profissional de cabelos cacheados segurando prancheta</title><desc id="d">Mulher negra sorridente com cabelos presos, roupa violeta e prancheta de planejamento.</desc>
+<defs>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#de9160"/><stop offset=".48" stop-color="#b6633d"/><stop offset="1" stop-color="#93502f"/></linearGradient>
+ <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bd50ae"/><stop offset=".5" stop-color="#793178"/><stop offset="1" stop-color="#572266"/></linearGradient>
+ <linearGradient id="paper" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#fffef5"/><stop offset="1" stop-color="#ffe9dc"/></linearGradient>
+ <filter id="s" x="-.3" y="-.3" width="1.6" height="1.6"><feDropShadow dx="1" dy="5" stdDeviation="5" flood-color="#6c295d" flood-opacity=".2"/></filter>
+</defs>
+<ellipse cx="240" cy="326" rx="195" ry="14" fill="#803a75" opacity=".11"/>
+<path d="M35 106q20-78 104-73" stroke="#ffddc6" stroke-width="26" stroke-linecap="round" opacity=".6"/>
+<path d="M411 93l15-23m2 44 27-1m-28 27 20 17" stroke="#fa7218" stroke-width="8" stroke-linecap="round"/>
+<!-- chair silhouette -->
+<path d="M79 309v-68q0-24 23-24h41" fill="none" stroke="#57405b" stroke-width="12" stroke-linecap="round"/>
+<!-- big tied-back hair -->
+<path d="M120 107q-30-48 4-82 39-30 92-12 32 11 42 50l-4 90-32 41-97-29Z" fill="#401c29"/>
+<g fill="#572330"><circle cx="109" cy="102" r="25"/><circle cx="112" cy="69" r="24"/><circle cx="135" cy="39" r="26"/><circle cx="171" cy="25" r="27"/><circle cx="208" cy="37" r="25"/><circle cx="234" cy="62" r="24"/><circle cx="248" cy="92" r="24"/><circle cx="235" cy="118" r="23"/></g>
+<path d="M170 12q-38-22-11-40 34-9 66 34" fill="#512332" stroke="#351827" stroke-width="4"/>
+<g fill="none" stroke="#8d4d4d" stroke-width="3.8" opacity=".7"><path d="M125 57q7-22 24-14m19-22q19-12 27 3m14 13q14 5 12 21"/></g>
+<!-- face -->
+<path d="M130 82q10-39 51-42 60 0 62 57l-9 54q-24 38-59 28-37-14-45-54Z" fill="url(#skin)" stroke="#914f37" stroke-width="3"/>
+<path d="M130 110q-22-10-23 10 2 19 25 22" fill="#bc7149"/>
+<path d="M147 102q13-10 26 0m35-4q10-10 21-1" stroke="#3c2232" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M150 109q10 8 22 0m37-3q9 8 20 0" stroke="#4f2733" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+<path d="M188 119q-6 7 0 13" stroke="#8c4537" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M167 143q26 22 48-1" fill="#fff8ee" stroke="#913e42" stroke-width="4" stroke-linejoin="round"/>
+<path d="M164 139q25 11 53-2" stroke="#913e42" stroke-width="3" fill="none"/>
+<circle cx="138" cy="143" r="10" fill="#ef8468" opacity=".5"/><circle cx="228" cy="135" r="10" fill="#ef8468" opacity=".5"/>
+<circle cx="131" cy="164" r="11" fill="none" stroke="#ffc345" stroke-width="6"/>
+<!-- purple blouse -->
+<path d="M126 170q-66-2-84 82l-10 66h315l-20-73q-19-73-90-75l-47 26Z" fill="url(#shirt)" stroke="#632b6c" stroke-width="5" filter="url(#s)"/>
+<path d="M153 170q26 30 58 31l22-27" fill="none" stroke="#f6b434" stroke-width="5"/>
+<path d="M168 202l26 40 25-43" fill="none" stroke="#f7a63b" stroke-width="3.5"/>
+<circle cx="193" cy="251" r="9" fill="#ffba3d"/>
+<!-- arm and clipboard -->
+<path d="M70 254q33-27 71 3l63 40-20 26-103-26Z" fill="url(#skin)" stroke="#ac6347" stroke-width="3"/>
+<g transform="rotate(10 318 236)" filter="url(#s)">
+ <rect x="235" y="143" width="160" height="174" rx="12" fill="#6b4b54" stroke="#463244" stroke-width="4"/>
+ <rect x="245" y="151" width="140" height="156" rx="7" fill="url(#paper)"/>
+ <rect x="289" y="132" width="52" height="29" rx="8" fill="#584a58"/>
+ <rect x="307" y="128" width="17" height="12" rx="4" fill="#514551"/>
+ <g stroke="#ee791e" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M267 194l7 7 12-16m-19 47 7 7 12-16m-19 47 7 7 12-16"/></g>
+ <g stroke="#efaa73" stroke-width="3" stroke-linecap="round"><path d="M302 193h57m-57 12h42m-42 29h57m-57 12h46m-46 27h53m-53 12h39"/></g>
+</g>
+<path d="M191 274q8-32 26-31 23-3 39 20l18 31-25 16-54-18" fill="url(#skin)" stroke="#ac6249" stroke-width="3"/>
+</svg>
