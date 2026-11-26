@@ -29,6 +29,8 @@ jobs:
           node --check app.js
           node --check curadoria.js
           node --check scripts/curadoria.mjs
+          node --check scripts/verify-acervo.mjs
+          node scripts/verify-acervo.mjs
       - name: Checar JSON, recursos e código publicado
         run: |
           node --input-type=module <<'NODE'
