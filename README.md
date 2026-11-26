@@ -41,7 +41,7 @@ Este repositório não deve modificar o aplicativo nem o repositório principal 
 - **Única ação pública: Abrir Issue de ajuste**. Não há botões Aprovar ou Desaprovar; o workflow de Issues não tem gatilho de escrita, e comentários nunca modificam arquivos automaticamente.
 - Rejeições e observações históricas são visíveis, mas exclusão de arquivos só ocorre em processo administrativo separado, mediante autorização.
 - O arquivo `data/review-catalog.json` é histórico e não serve mais como fonte principal da galeria.
-- As ilustrações PNG geradas nas conversas e ainda ausentes do repositório principal são um inventário distinto; não estão cobertas pelo JSON de 92 itens e requerem importação dos arquivos originais para aparecer no site, incluindo a família final da Issue #10.
+- O histórico separado de 95 imagens e mockups da conversa foi incorporado como prévias reduzidas (10 lotes JSON em `data/historico-*.json`), inclusive a família final aprovada da Issue #10. O filtro **Coleção** alterna entre o JSON original (92), o histórico (95) e todos (187). A publicação de miniaturas não altera o estado de aprovação nem substitui os PNGs originais. Três capturas técnicas de configurações de conta foram excluídas da publicação pública por privacidade.
 - A publicação oficial usa `.github/workflows/pages.yml`. O fluxo Jekyll legado não deve fazer deploy automático paralelo.
 
 ### Limitação de privacidade
