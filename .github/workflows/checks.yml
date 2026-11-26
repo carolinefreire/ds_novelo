@@ -1,0 +1,50 @@
+name: Validar Design System
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.js'
+      - '*.css'
+      - 'assets/**'
+      - 'data/**'
+      - 'scripts/**'
+      - '.github/workflows/checks.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checar sintaxe de JavaScript
+        run: |
+          node --check app.js
+          node --check curadoria.js
+          node --check scripts/curadoria.mjs
+      - name: Checar JSON, recursos e código publicado
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const files=['index.html','curadoria.html','styles.css','curadoria.css','app.js','curadoria.js','data/acervo.json','data/review-catalog.json'];
+          for(const f of files) if(!fs.existsSync(f)||!fs.statSync(f).size) throw Error('Arquivo ausente ou vazio: '+f);
+          const cat=JSON.parse(fs.readFileSync('data/acervo.json','utf8'));
+          const review=JSON.parse(fs.readFileSync('data/review-catalog.json','utf8'));
+          if(!Array.isArray(cat.records)||!Array.isArray(review.items)) throw Error('Catálogo inválido');
+          for(const item of cat.records){
+            if(item.status==='aprovado' && item.path && !item.path.startsWith('https://') && !fs.existsSync(item.path)) throw Error('Imagem ausente: '+item.path);
+          }
+          for(const item of review.items){
+            if(!/^https:\/\/raw.githubusercontent.com\//.test(item.image)) throw Error('Fonte inválida: '+item.path);
+          }
+          const index=fs.readFileSync('index.html','utf8');
+          if(!index.includes('id="acervo"')||!index.includes('id="experiencia"')) throw Error('Seções essenciais ausentes');
+          console.log('OK:',cat.records.length,'obras cadastradas;',review.items.length,'ativos para revisão.');
+          NODE
