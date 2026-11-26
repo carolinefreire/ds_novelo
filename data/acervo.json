@@ -8,10 +8,10 @@
       "id": "marca-logo",
       "name": "Assinatura oficial Novelo",
       "category": "Marca",
-      "status": "aprovado",
-      "path": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/logo-novelo.png",
+      "status": "aprovado_pendente_de_sincronizacao",
+      "path": null,
       "source": "public/logo-novelo.png",
-      "caption": "Logotipo oficial, não redesenhado.",
+      "caption": "Logotipo oficial, não redesenhado. O arquivo binário está aguardando sincronização segura do repositório privado.",
       "alt": "Logotipo Novelo em fios multicoloridos com a maletinha."
     },
     {
@@ -78,10 +78,10 @@
       "id": "fio-coracoes",
       "name": "Fio com corações",
       "category": "Elementos",
-      "status": "aprovado",
-      "path": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/fio-coracoes.png",
+      "status": "aprovado_pendente_de_sincronizacao",
+      "path": null,
       "source": "public/fio-coracoes.png",
-      "caption": "Fio de lã oficial com textura realista.",
+      "caption": "Fio de lã oficial com textura realista. O arquivo binário está aguardando sincronização segura do repositório privado.",
       "alt": "Fios de lã coloridos entrelaçados em corações."
     },
     {
