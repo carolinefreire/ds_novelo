@@ -2,7 +2,7 @@
   "schema": "novelo-ds-review/v1",
   "repository": "carolinefreire/novelo",
   "treeSha": "4d548f75124b1facbc88a6d627d556e707aba193",
-  "notice": "Galeria pública: arquivos identificados como pendentes/reprovados são prévias para avaliação, sem aprovação. Abrir Issue não modifica nenhum arquivo.",
+  "notice": "Os 27 itens deste subconjunto herdam exatamente os status e comentários do JSON original com 92 avaliações. Publicar miniatura não muda aprovação.",
   "items": [
     {
       "path": "public/brand/avatar-candidata.svg",
@@ -10,11 +10,13 @@
       "category": "Elementos visuais",
       "size": 1284,
       "sha": "abddd088b1080bf1afbf19e1e70a983aec2e293d",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/avatar-candidata.svg",
-      "notes": "",
+      "notes": "O avatar é pra ser mais parecido com os voluntários, tipo novelo ",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/avatar-candidata.svg",
+      "reviewSourceSha": "abddd088b1080bf1afbf19e1e70a983aec2e293d"
     },
     {
       "path": "public/brand/broto-de-vida.svg",
@@ -22,11 +24,13 @@
       "category": "Elementos visuais",
       "size": 686,
       "sha": "7d97e9df5a3f6ed977f046db1ba6fa7663e4cffb",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/broto-de-vida.svg",
-      "notes": "",
+      "notes": "Nem sei o que é isso e pra que serve",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/broto-de-vida.svg",
+      "reviewSourceSha": "7d97e9df5a3f6ed977f046db1ba6fa7663e4cffb"
     },
     {
       "path": "public/brand/coracao-de-fio.svg",
@@ -34,11 +38,13 @@
       "category": "Fios e símbolos",
       "size": 4096,
       "sha": "50203ba629476b481fc465efa5895d17e257ab86",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/coracao-de-fio.svg",
-      "notes": "",
+      "notes": "Pode apagar",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/coracao-de-fio.svg",
+      "reviewSourceSha": "50203ba629476b481fc465efa5895d17e257ab86"
     },
     {
       "path": "public/brand/coracao-fios-laterais.svg",
@@ -46,11 +52,13 @@
       "category": "Fios e símbolos",
       "size": 4097,
       "sha": "e0753585dc0071b5a2fc4318394d45fcc5dc4580",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/coracao-fios-laterais.svg",
-      "notes": "",
+      "notes": "Esse já tem, pode apagar",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/coracao-fios-laterais.svg",
+      "reviewSourceSha": "e0753585dc0071b5a2fc4318394d45fcc5dc4580"
     },
     {
       "path": "public/brand/elo-mutuo.svg",
@@ -58,11 +66,13 @@
       "category": "Elementos visuais",
       "size": 2223,
       "sha": "aa1b4b169af3fc088c9108486d989e029832fb79",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/elo-mutuo.svg",
-      "notes": "",
+      "notes": "Mto ruim",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/elo-mutuo.svg",
+      "reviewSourceSha": "aa1b4b169af3fc088c9108486d989e029832fb79"
     },
     {
       "path": "public/brand/fio-entrelaçado-base.svg",
@@ -70,11 +80,13 @@
       "category": "Fios e símbolos",
       "size": 2271,
       "sha": "97fd39f423aa45b843453ef5b22441c2c67d317b",
-      "status": "reprovado_historico",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/fio-entrelaçado-base.svg",
-      "notes": "Fio vetorial liso rejeitado para a tela inicial; não excluir automaticamente.",
+      "notes": "Horrivel, Faça mais bonito, fluido, texturizado de lá também ",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/fio-entrelaçado-base.svg",
+      "reviewSourceSha": "97fd39f423aa45b843453ef5b22441c2c67d317b"
     },
     {
       "path": "public/brand/fio-entrelaçado-topo.svg",
@@ -82,11 +94,13 @@
       "category": "Fios e símbolos",
       "size": 2388,
       "sha": "e6fdafd69f8a38ed7a93eef5e098b55d09e28c34",
-      "status": "reprovado_historico",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/fio-entrelaçado-topo.svg",
-      "notes": "Fio vetorial liso rejeitado para a tela inicial; não excluir automaticamente.",
+      "notes": "Faça mais bonito, fluido, texturizado de lá também ",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/fio-entrelaçado-topo.svg",
+      "reviewSourceSha": "e6fdafd69f8a38ed7a93eef5e098b55d09e28c34"
     },
     {
       "path": "public/brand/formas-organicas.svg",
@@ -94,11 +108,13 @@
       "category": "Elementos visuais",
       "size": 579,
       "sha": "136f44a50516b1fc3bcae04e458810d495841727",
-      "status": "pendente",
+      "status": "aprovado",
       "image": "assets/previews/public/brand/formas-organicas.svg",
       "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/formas-organicas.svg",
+      "reviewSourceSha": "136f44a50516b1fc3bcae04e458810d495841727"
     },
     {
       "path": "public/brand/maleta-novelo.svg",
@@ -106,11 +122,13 @@
       "category": "Marca",
       "size": 1987,
       "sha": "88d48fd1e9890f5a99c410904b892aa1fdbd4f70",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/maleta-novelo.svg",
       "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/maleta-novelo.svg",
+      "reviewSourceSha": "88d48fd1e9890f5a99c410904b892aa1fdbd4f70"
     },
     {
       "path": "public/brand/personagem-profissional-cadeira-rodas.svg",
@@ -118,11 +136,13 @@
       "category": "Elementos visuais",
       "size": 5318,
       "sha": "c4bcd630ee1603bb93b34f209f28f9eda09c0fcc",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/personagem-profissional-cadeira-rodas.svg",
-      "notes": "",
+      "notes": "Pode apagar esse",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/personagem-profissional-cadeira-rodas.svg",
+      "reviewSourceSha": "c4bcd630ee1603bb93b34f209f28f9eda09c0fcc"
     },
     {
       "path": "public/brand/personagem-profissional-prancheta.svg",
@@ -130,11 +150,13 @@
       "category": "Elementos visuais",
       "size": 4239,
       "sha": "36fd2f7375992e7a997a30bd55eeb495f264239b",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/personagem-profissional-prancheta.svg",
-      "notes": "",
+      "notes": "Pode apagar esse",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/personagem-profissional-prancheta.svg",
+      "reviewSourceSha": "36fd2f7375992e7a997a30bd55eeb495f264239b"
     },
     {
       "path": "public/brand/personagens/beatriz_voluntaria.svg",
@@ -142,11 +164,13 @@
       "category": "Personagens",
       "size": 282501,
       "sha": "2c8865875a9295bd78a498de9432286e4ccfcd04",
-      "status": "pendente",
+      "status": "aprovado",
       "image": "assets/previews/public/brand/personagens/beatriz_voluntaria.svg",
-      "notes": "Aprovação individual não confirmada no histórico recuperado.",
+      "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/personagens/beatriz_voluntaria.svg",
+      "reviewSourceSha": "2c8865875a9295bd78a498de9432286e4ccfcd04"
     },
     {
       "path": "public/brand/personagens/diego_voluntario.svg",
@@ -157,7 +181,9 @@
       "status": "aprovado",
       "image": "assets/diego_voluntario.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "reviewSourceId": "arquivo:public/brand/personagens/diego_voluntario.svg",
+      "reviewSourceSha": "8e6288c88d3cfd024ad9aa5c97eef27ce74462ea"
     },
     {
       "path": "public/brand/personagens/joana_voluntaria.svg",
@@ -168,7 +194,9 @@
       "status": "aprovado",
       "image": "assets/joana_voluntaria.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "reviewSourceId": "arquivo:public/brand/personagens/joana_voluntaria.svg",
+      "reviewSourceSha": "1552ace7d1005d9812de6ac4a75b1925d88d6427"
     },
     {
       "path": "public/brand/personagens/lucia_voluntaria.svg",
@@ -179,7 +207,9 @@
       "status": "aprovado",
       "image": "assets/lucia_voluntaria.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "reviewSourceId": "arquivo:public/brand/personagens/lucia_voluntaria.svg",
+      "reviewSourceSha": "897950c375b2215290a3b20d76ea487044349ba8"
     },
     {
       "path": "public/brand/personagens/marina_voluntaria.svg",
@@ -190,7 +220,9 @@
       "status": "aprovado",
       "image": "assets/marina_voluntaria.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "reviewSourceId": "arquivo:public/brand/personagens/marina_voluntaria.svg",
+      "reviewSourceSha": "808b817b305fddda5b7e92736a397c1d6f0a3ad3"
     },
     {
       "path": "public/brand/personagens/rafael_voluntario.svg",
@@ -201,7 +233,9 @@
       "status": "aprovado",
       "image": "assets/rafael_voluntario.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "reviewSourceId": "arquivo:public/brand/personagens/rafael_voluntario.svg",
+      "reviewSourceSha": "bc196fd0741a85d55b187a7e7af37e8e9a5a7f2e"
     },
     {
       "path": "public/brand/personagens/voluntarios_novelo.svg",
@@ -209,11 +243,13 @@
       "category": "Personagens",
       "size": 716502,
       "sha": "14a55a95402777e0fde6d7857197d1cb05e0e144",
-      "status": "pendente",
+      "status": "aprovado",
       "image": "assets/previews/public/brand/personagens/voluntarios_novelo.svg",
-      "notes": "Aprovações individuais não implicam aprovação do grupo.",
+      "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/personagens/voluntarios_novelo.svg",
+      "reviewSourceSha": "14a55a95402777e0fde6d7857197d1cb05e0e144"
     },
     {
       "path": "public/brand/pessoas-diversas-novelo.svg",
@@ -221,11 +257,13 @@
       "category": "Elementos visuais",
       "size": 4480,
       "sha": "3a7178fd60cc84e5f977151c229ad3e816029f4b",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/pessoas-diversas-novelo.svg",
-      "notes": "",
+      "notes": "Esse pessoas diversas é o desenho de novelo que vc fez que tem a moça dando comida na boca de uma pessoa com traqueostomia, vou enviar",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/pessoas-diversas-novelo.svg",
+      "reviewSourceSha": "3a7178fd60cc84e5f977151c229ad3e816029f4b"
     },
     {
       "path": "public/brand/rede-de-pessoas.svg",
@@ -233,11 +271,13 @@
       "category": "Elementos visuais",
       "size": 1955,
       "sha": "bad1ee94cbda65fbf282320027d9374a797eb6eb",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/public/brand/rede-de-pessoas.svg",
       "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/brand/rede-de-pessoas.svg",
+      "reviewSourceSha": "bad1ee94cbda65fbf282320027d9374a797eb6eb"
     },
     {
       "path": "public/brand/tres-geracoes-tecendo-juntas.svg",
@@ -248,7 +288,9 @@
       "status": "aprovado",
       "image": "assets/tres-geracoes-tecendo-juntas.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "reviewSourceId": "arquivo:public/brand/tres-geracoes-tecendo-juntas.svg",
+      "reviewSourceSha": "40ee2a5e22887bb00fead68af24950cf144c1d5a"
     },
     {
       "path": "public/favicon.ico",
@@ -260,7 +302,9 @@
       "image": "assets/previews/public/favicon.ico.svg",
       "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/favicon.ico",
+      "reviewSourceSha": "3c01d69713f9c184e92b74f5799e6dff2f500825"
     },
     {
       "path": "public/fio-coracoes.png",
@@ -272,7 +316,9 @@
       "image": "assets/previews/public/fio-coracoes.png.svg",
       "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/fio-coracoes.png",
+      "reviewSourceSha": "05c39eddea2ff63cd553696b4bcfc6133f15011f"
     },
     {
       "path": "public/fio-floral.png",
@@ -280,11 +326,13 @@
       "category": "Fios e símbolos",
       "size": 764970,
       "sha": "ab5455359f3b39e525c413a0e023393d765b6548",
-      "status": "pendente",
+      "status": "aprovado",
       "image": "assets/previews/public/fio-floral.png.svg",
-      "notes": "",
+      "notes": "Faça mais desses",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:public/fio-floral.png",
+      "reviewSourceSha": "ab5455359f3b39e525c413a0e023393d765b6548"
     },
     {
       "path": "public/logo-novelo.png",
@@ -294,8 +342,10 @@
       "sha": "cd562fde4af4f3b1af5647881a87aab0e17ad5ea",
       "status": "aprovado",
       "image": null,
-      "notes": "A imagem original da marca ainda precisa de sincronização binária; não substituir por aproximações.",
-      "private_source": true
+      "notes": "",
+      "private_source": true,
+      "reviewSourceId": "arquivo:public/logo-novelo.png",
+      "reviewSourceSha": "cd562fde4af4f3b1af5647881a87aab0e17ad5ea"
     },
     {
       "path": "src/assets/demo-portraits.jpg",
@@ -303,11 +353,13 @@
       "category": "Referências de tela",
       "size": 162326,
       "sha": "e2c2b694cb2c79fc8f32686a2039264835dd7d44",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/src/assets/demo-portraits.jpg.svg",
       "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:src/assets/demo-portraits.jpg",
+      "reviewSourceSha": "e2c2b694cb2c79fc8f32686a2039264835dd7d44"
     },
     {
       "path": "src/assets/hero-novelo.jpg",
@@ -315,12 +367,15 @@
       "category": "Referências de tela",
       "size": 228463,
       "sha": "5ddfb670f4827bffa050dc17da3304192443462e",
-      "status": "pendente",
+      "status": "reprovado",
       "image": "assets/previews/src/assets/hero-novelo.jpg.svg",
       "notes": "",
       "private_source": true,
-      "preview_public": true
+      "preview_public": true,
+      "reviewSourceId": "arquivo:src/assets/hero-novelo.jpg",
+      "reviewSourceSha": "5ddfb670f4827bffa050dc17da3304192443462e"
     }
   ],
-  "updatedAt": "2026-11-26"
+  "updatedAt": "2026-11-26",
+  "reviewSource": "data/curadoria-original-2026-11-24.json"
 }
