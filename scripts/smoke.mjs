@@ -82,6 +82,7 @@ try{
     throw error;
   }
   assert.equal(await admin.locator(".review-card").count(),95,"All 95 historical images must be visible");
+  console.log("HISTÓRICO CARREGADO: 95 prévias, incluindo duplicatas de conteúdo identificadas individualmente.");
   const historical=admin.locator(".review-card .asset-image").first();
   assert.equal(await historical.evaluate(img=>img.complete&&img.naturalWidth>0),true,"Historical preview must be rendered");
   await admin.locator("#search").fill("a_vibrant_detailed_crochet_amigurumi_style_illust.png");
