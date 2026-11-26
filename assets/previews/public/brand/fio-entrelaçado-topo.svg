@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" fill="none" role="img" aria-labelledby="t"><title id="t">Fios coloridos entrelaçados da Novelo</title><defs>
+<linearGradient id="fio" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+ <stop offset="0" stop-color="#EE2737"/><stop offset=".15" stop-color="#FF6423"/><stop offset=".29" stop-color="#F7BC25"/><stop offset=".45" stop-color="#139B69"/><stop offset=".61" stop-color="#1685C2"/><stop offset=".75" stop-color="#2846BC"/><stop offset=".88" stop-color="#9B28AF"/><stop offset="1" stop-color="#F51B70"/>
+</linearGradient>
+<linearGradient id="fioBlue" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#FF4D28"/><stop offset=".28" stop-color="#EE245F"/><stop offset=".57" stop-color="#5D29B0"/><stop offset=".79" stop-color="#1769CA"/><stop offset="1" stop-color="#139B72"/></linearGradient>
+<linearGradient id="fioSun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F52968"/><stop offset=".26" stop-color="#FF9E19"/><stop offset=".48" stop-color="#F6CD28"/><stop offset=".67" stop-color="#159765"/><stop offset=".85" stop-color="#115CC0"/><stop offset="1" stop-color="#9D20A7"/></linearGradient>
+<filter id="shadow" x="-30%" y="-40%" width="165%" height="190%"><feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b"/><feOffset in="b" dx="1" dy="4" result="o"/><feComponentTransfer in="o" result="s"><feFuncA type="linear" slope=".20"/></feComponentTransfer><feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<path d="M-38 186C92 31 181 67 224 104S276 173 307 128C357 54 445 70 540 99S678 115 729 38 870-2 1038-40" stroke="#4D215C" stroke-opacity=".09" stroke-width="33" stroke-linecap="round"/>
+<path d="M-38 181C95 33 178 66 225 107S278 170 306 128C359 57 447 69 540 101S680 118 732 41 871-1 1040-40" stroke="url(#fio)" stroke-width="28" stroke-linecap="round" filter="url(#shadow)"/>
+<path d="M-38 175C93 31 179 62 228 102S280 163 306 122C359 54 450 65 542 97S684 111 733 35 873-7 1040-43" stroke="#FFF6DF" stroke-opacity=".24" stroke-width="3" stroke-linecap="round"/>
+<path d="M201 104C232 58 259 91 249 122S210 165 224 118C242 59 324 60 378 79" stroke="url(#fioSun)" stroke-width="25" stroke-linecap="round" filter="url(#shadow)"/>
+<path d="M201 98C230 56 255 87 245 119" stroke="#FFE6AA" stroke-opacity=".32" stroke-width="3" stroke-linecap="round"/>
+</svg>
