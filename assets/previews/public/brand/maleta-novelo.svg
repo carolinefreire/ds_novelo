@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="t"><title id="t">Maleta de oportunidades Novelo</title><defs>
+<linearGradient id="fio" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+ <stop offset="0" stop-color="#EE2737"/><stop offset=".15" stop-color="#FF6423"/><stop offset=".29" stop-color="#F7BC25"/><stop offset=".45" stop-color="#139B69"/><stop offset=".61" stop-color="#1685C2"/><stop offset=".75" stop-color="#2846BC"/><stop offset=".88" stop-color="#9B28AF"/><stop offset="1" stop-color="#F51B70"/>
+</linearGradient>
+<linearGradient id="fioBlue" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#FF4D28"/><stop offset=".28" stop-color="#EE245F"/><stop offset=".57" stop-color="#5D29B0"/><stop offset=".79" stop-color="#1769CA"/><stop offset="1" stop-color="#139B72"/></linearGradient>
+<linearGradient id="fioSun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F52968"/><stop offset=".26" stop-color="#FF9E19"/><stop offset=".48" stop-color="#F6CD28"/><stop offset=".67" stop-color="#159765"/><stop offset=".85" stop-color="#115CC0"/><stop offset="1" stop-color="#9D20A7"/></linearGradient>
+<filter id="shadow" x="-30%" y="-40%" width="165%" height="190%"><feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b"/><feOffset in="b" dx="1" dy="4" result="o"/><feComponentTransfer in="o" result="s"><feFuncA type="linear" slope=".20"/></feComponentTransfer><feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<path d="M40 45V30C40 19 47 14 58 14H72C83 14 90 19 90 30V45" stroke="url(#fioSun)" stroke-width="10" stroke-linecap="round" filter="url(#shadow)"/>
+<rect x="13" y="42" width="102" height="70" rx="13" stroke="url(#fio)" stroke-width="10" filter="url(#shadow)"/>
+<path d="M14 76C40 84 76 77 114 63" stroke="url(#fioBlue)" stroke-width="8" stroke-linecap="round"/>
+<path d="M89 58C92 65 93 73 85 82" stroke="#F51D73" stroke-width="7" stroke-linecap="round"/>
+</svg>
