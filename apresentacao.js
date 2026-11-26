@@ -5,7 +5,7 @@ if(!source||!Array.isArray(source.slides)){document.body.innerHTML='<main style=
 const S=source.slides,A=source.arts,LAYOUTS=['cover','quote','metaphor','trio','values','ecosystem','journey','profile','weave','match','job','conversation','feature','enterprise','real','badges','privacy','paths','admin','policy','final'],TONES=['plum','cream','plum','rose','cream','peach','cream','rose','mint','cream','peach','rose','cream','mint','peach','cream','plum','cream','mint','plum','plum'];
 const $=s=>document.querySelector(s);
 const stage=$('#stage'),frame=$('#frame'),bar=$('#bar'),counter=$('#counter'),chapter=$('#chapter'),announce=$('#announce'),overview=$('#overview'),thumbs=$('#thumbs');
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;':'&quot;'}[c]));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const txt=s=>esc(s),tag=(label)=>'<span class="kicker reveal">'+txt(label)+'</span>';
 const art=(key,klass='',floating=true)=>{const o=A[key];return o?'<img class="visual-figure '+klass+' reveal'+(floating?' float':'')+'" src="'+esc(o.src)+'" alt="'+esc(o.alt)+'" decoding="async" draggable="false">':''};
 const topline=(s,i)=>'<div class="slide-topline reveal"><span class="line"></span><span>'+String(i+1).padStart(2,'0')+' / 21</span><span>•</span><span>'+txt(s.k)+'</span></div>';
