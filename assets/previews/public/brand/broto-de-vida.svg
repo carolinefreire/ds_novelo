@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="t"><title id="t">Broto que representa o encaixe de vida</title>
+<path d="M65 115V64" stroke="#63803C" stroke-width="5.5" stroke-linecap="round"/>
+<path d="M65 83C30 81 15 54 19 34 51 31 72 51 65 83Z" fill="#AFCB71" fill-opacity=".10" stroke="#64823F" stroke-width="5" stroke-linejoin="round"/>
+<path d="M64 71C64 34 85 16 112 12 114 43 91 69 64 71Z" fill="#C8DFA0" fill-opacity=".12" stroke="#64823F" stroke-width="5" stroke-linejoin="round"/>
+<path d="M65 83C56 66 45 55 34 49M65 70C76 54 86 43 99 31" stroke="#7A984B" stroke-width="2.2" opacity=".85" stroke-linecap="round"/>
+</svg>
