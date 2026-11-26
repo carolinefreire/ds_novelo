@@ -45,3 +45,11 @@
 /* As imagens históricas possuem prévias reduzidas incorporadas ao catálogo. */
 .review-card .review-path{font-variant-numeric:tabular-nums}
 @media(min-width:650px) and (max-width:1000px){.admin-stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Revisão integral do JSON e das 95 imagens históricas, leve no celular */
+.curation-pagination{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:26px auto 10px}
+.curation-pagination button{padding:11px 16px;border-radius:999px;border:1px solid #dabecf;background:#fff7fa;color:#743b66;font:600 .78rem Poppins,sans-serif;cursor:pointer}
+.curation-pagination button:disabled{opacity:.35;cursor:not-allowed}
+.curation-pagination span{font:600 .72rem Poppins,sans-serif;color:#72506b}
+.asset-frame img.asset-image{display:block;max-height:100%;object-fit:contain}
+@media(max-width:650px){.curation-pagination{gap:8px}.curation-pagination button{padding:10px 12px}.curation-pagination span{width:100%;order:-1;text-align:center}.review-thumb{height:190px}}
