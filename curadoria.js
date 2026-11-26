@@ -36,6 +36,12 @@ const swatches = Object.freeze({
 const yarn = ["--yarn-red","--yarn-orange","--yarn-yellow","--yarn-green","--yarn-blue","--yarn-purple","--yarn-pink"];
 const rainbow = "linear-gradient(90deg," + yarn.map(k => swatches[k]).join(",") + ")";
 const statusLabel = {aprovado:"Aprovado",reprovado:"Reprovado",pendente:"Pendente"};
+// Propostas novas não alteram o estado, a nota nem o arquivo de origem do JSON histórico.
+const revisionAssets = Object.freeze({
+  "public/brand/elo-mutuo.svg": "assets/revisoes/elo-mutuo-v2.svg",
+  "public/brand/fio-entrelaçado-base.svg": "assets/revisoes/fio-entrelaçado-base-v2.svg",
+  "public/brand/fio-entrelaçado-topo.svg": "assets/revisoes/fio-entrelaçado-topo-v2.svg"
+});
 const itemStatus = item => item.kind==="historico" ?
   (item.status==="aprovado" ? "Aprovada (Issue #10)" : "Não avaliada no JSON original")
   : (statusLabel[item.status]||item.status);
@@ -62,6 +68,24 @@ function iconName(item) {
 }
 function createPreview(item, expanded = false) {
   const frame = E("div","asset-frame" + (expanded ? " is-expanded" : ""));
+  if(item.kind === "arquivo" && revisionAssets[filePath(item)]) {
+    const compare = E("div", "asset-comparison" + (expanded ? " is-large" : ""));
+    const newer = E("figure", "asset-comparison-new");
+    const newerImg = E("img", "asset-image");
+    newerImg.src = revisionAssets[filePath(item)];
+    newerImg.alt = "Proposta revisada, ainda não aprovada, para " + item.name;
+    newerImg.loading = expanded ? "eager" : "lazy";
+    newer.append(newerImg, E("figcaption", "", "Proposta v2 · em avaliação"));
+    const previous = E("figure", "asset-comparison-old");
+    const originalImg = E("img", "asset-image");
+    originalImg.src = previewPath(item);
+    originalImg.alt = "Versão original reprovada de " + item.name;
+    originalImg.loading = expanded ? "eager" : "lazy";
+    previous.append(originalImg, E("figcaption", "", "Original · reprovado"));
+    compare.append(newer, previous);
+    frame.append(compare);
+    return frame;
+  }
   if(item.kind === "arquivo" || item.kind === "historico") {
     const img = E("img","asset-image");
     img.alt = "Prévia do arquivo " + item.name + ", " + itemStatus(item);
@@ -144,7 +168,9 @@ function openDialog(item,origin){
   $("dialog-preview").hidden=true;
   $("private-preview").hidden=true;
   $("dialog-note").value=typeof notes[item.id]==="string" ? notes[item.id] : "";
-  $("dialog-help").textContent="Uma Issue registra o comentário para revisão. Não aprova, exclui nem altera arquivos.";
+  $("dialog-help").textContent=revisionAssets[filePath(item)]
+    ? "Proposta nova ao lado do original, ainda sem aprovação. O comentário histórico permanece preservado; a Issue registra novos ajustes."
+    : "Uma Issue registra o comentário para revisão. Não aprova, exclui nem altera arquivos.";
   $("action-dialog").showModal();
   $("dialog-close").focus();
 }
@@ -162,6 +188,7 @@ function issueUrl(item,note){
     "",
     item.kind==="historico"?"### Observação histórica":"### Observação anterior (JSON original)",
     item.note?.trim()||"Sem comentário anterior.",
+    ...(revisionAssets[filePath(item)] ? ["", "**Proposta v2 para avaliação:** " + revisionAssets[filePath(item)], "**Atenção:** o status reprovado pertence ao original; a proposta nova não foi aprovada."] : []),
     "",
     "### Ajuste solicitado agora",
     note,
@@ -219,7 +246,8 @@ function render(){
     data.append(E("p","review-path",item.kind==="historico"?(item.originalSize+" · prévia reduzida"):item.kind==="icone"?"lucide-react":filePath(item)));
     const chip=E("span","review-status "+(item.status==="aprovado"?"is-approved":item.status==="reprovado"?"is-rejected":""),itemStatus(item));
     data.append(chip);
-    if(item.note)data.append(E("p","review-comment","Comentário: "+item.note));
+    if(item.note)data.append(E("p","review-comment","Comentário original: "+item.note));
+    if(revisionAssets[filePath(item)])data.append(E("p","review-revision","Refeito conforme comentário · versão 2 aguardando avaliação"));
     if(item.path==="public/logo-novelo.png")data.append(E("p","visual-explainer","O original PNG da logo ainda está pendente de sincronização; a referência visual será o mapa estético quando disponível."));
     const act=E("button","review-open","Ampliar · abrir Issue");
     act.type="button";act.addEventListener("click",()=>openDialog(item,act));
