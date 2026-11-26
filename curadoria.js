@@ -68,7 +68,20 @@ function createPreview(item, expanded = false) {
     img.loading = expanded ? "eager" : "lazy";
     const unavailable = E("span","asset-unavailable","Prévia não disponível para este arquivo");
     unavailable.hidden = true;
-    img.onerror = () => { img.hidden = true; unavailable.hidden = false; };
+    img.onerror = () => {
+      if(item.kind==="arquivo"&&item.path==="public/logo-novelo.png"&&!img.dataset.referenceTried){
+        img.dataset.referenceTried="true";
+        const map=historyItems.find(x=>/Mapa Estético da Novelo/i.test(x.name||""));
+        if(map?.preview){
+          img.alt="Mapa estético da Novelo contendo a marca como referência, não o arquivo PNG do logotipo oficial";
+          img.src=map.preview;
+          unavailable.textContent="Referência do mapa estético, não o PNG original";
+          return;
+        }
+      }
+      img.hidden=true;
+      unavailable.hidden=false;
+    };
     img.onload = () => { img.hidden = false; unavailable.hidden = true; };
     const path = previewPath(item);
     if(path) img.src = path;
@@ -207,6 +220,7 @@ function render(){
     const chip=E("span","review-status "+(item.status==="aprovado"?"is-approved":item.status==="reprovado"?"is-rejected":""),itemStatus(item));
     data.append(chip);
     if(item.note)data.append(E("p","review-comment","Comentário: "+item.note));
+    if(item.path==="public/logo-novelo.png")data.append(E("p","visual-explainer","O original PNG da logo ainda está pendente de sincronização; a referência visual será o mapa estético quando disponível."));
     const act=E("button","review-open","Ampliar · abrir Issue");
     act.type="button";act.addEventListener("click",()=>openDialog(item,act));
     data.append(act);card.append(thumb,data);grid.append(card);
