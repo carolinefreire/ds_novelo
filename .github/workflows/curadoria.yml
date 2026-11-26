@@ -1,33 +1,19 @@
-name: Curadoria Novelo (somente administradora)
+name: Curadoria Novelo (registro manual por Issues)
 
+# Abertura de Issues é apenas registro. Não há automação de escrita
+# nem acesso ao token do repositório principal.
 on:
-  issues:
-    types: [opened]
   workflow_dispatch:
 
 permissions:
-  contents: write
-  issues: write
-
-concurrency:
-  group: novelo-curadoria
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  revisar:
-    if: github.event_name == 'issues' && github.event.action == 'opened' && github.event.issue.user.login == 'carolinefreire' && github.actor == 'carolinefreire'
+  verificar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Verificar sintaxe do fluxo administrativo
-        run: node --check scripts/curadoria.mjs
-      - name: Registrar decisão autorizada
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NOVELO_GITHUB_TOKEN: ${{ secrets.NOVELO_GITHUB_TOKEN }}
-          GITHUB_EVENT_PATH: ${{ github.event_path }}
-          GITHUB_ACTOR: ${{ github.actor }}
-        run: node scripts/curadoria.mjs
+      - name: Confirmar curadoria somente consultiva
+        run: |
+          echo "Abertura de Issues nao executa aprovacao, exclusao ou alteracao de arquivos."
+          echo "Apenas o repositorio pode ser alterado por procedimentos administrativos separados."
