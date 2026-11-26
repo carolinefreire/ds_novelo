@@ -46,12 +46,15 @@ try{
   assert.equal(await admin.locator(".review-card").count(),27,"Review inventory should include every repo graphic");
   await admin.locator(".review-card .review-open").first().click();
   assert.equal(await admin.locator("#action-dialog").evaluate(d=>d.open),true,"Curadoria modal should open");
-  assert.equal(await admin.locator("#approve").count(),1);
-  assert.equal(await admin.locator("#reject").count(),1);
+  assert.equal(await admin.locator("#approve").count(),0);
+  assert.equal(await admin.locator("#reject").count(),0);
   assert.equal(await admin.locator("#alter").count(),1);
+  const shown=admin.locator("#dialog-preview");
+  const privateNotice=admin.locator("#private-preview");
+  assert.ok((await shown.isVisible()) || (await privateNotice.isVisible()), "Preview or private-file explanation should be visible");
   await admin.screenshot({path:"preview-screenshots/curadoria-modal.png"});
   await admin.locator("#dialog-close").click();
   await admin.screenshot({path:"preview-screenshots/curadoria-gallery.png",fullPage:true});
   assert.deepEqual(errors,[],"No uncaught JavaScript errors");
-  console.log("SMOKE OK: desktop and mobile, approved artworks, 27 review entries, private image placeholders, and three decision buttons.");
+  console.log("SMOKE OK: desktop and mobile, approved artworks, 27 review entries, private image placeholders, and a single Issue action button.");
 }finally{await browser.close();}
