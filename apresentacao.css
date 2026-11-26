@@ -112,3 +112,14 @@
 }
 @media(max-width:400px){.canvas{width:min(calc(100vw - 12px),calc((100dvh - 136px)*3/4))}.slide-content{padding:16px}.ui-head h2,.title{font-size:30px}.sub{font-size:11px}.trio-card{padding:9px}.value-card{padding:9px}.value-card p{font-size:8px}.real-cell p,.feature-card p{font-size:9px}.top{height:55px;flex-basis:55px}.dock{height:70px;flex-basis:70px}.stage{padding:5px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+
+/* Palco estável: duas cenas podem coexistir durante a transição JS. */
+.frame{position:relative;width:min(100%,calc((100dvh - 188px)*16/9),1660px);aspect-ratio:16/9;max-height:100%;flex:none}
+.frame>.canvas{position:absolute;inset:0;width:100%;height:100%;max-height:none;aspect-ratio:auto;backface-visibility:hidden;will-change:opacity,transform}
+@media(max-width:760px){
+ .frame{width:min(calc(100vw - 14px),calc((100dvh - 146px)*3/4));aspect-ratio:3/4}
+ .frame>.canvas{width:100%;height:100%}
+}
+@media(max-width:400px){
+ .frame{width:min(calc(100vw - 12px),calc((100dvh - 136px)*3/4))}
+}
