@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 235" role="img" aria-labelledby="title desc"><title id="title">Fios entrelaçados em movimento · proposta 2</title><desc id="desc">Três fios fluidos de lã multicolorida ondulam e se entrelaçam, com textura têxtil e delicadas fibras.</desc><defs>
+<linearGradient id="fio-base2-rainbow" x1="0" y1=".5" x2="1" y2=".5" objectBoundingBox="true"><stop offset="0" stop-color="#f23538"/><stop offset=".14" stop-color="#ff8a23"/><stop offset=".29" stop-color="#f4ca34"/><stop offset=".46" stop-color="#19966a"/><stop offset=".62" stop-color="#1b8fc6"/><stop offset=".78" stop-color="#3251bd"/><stop offset=".9" stop-color="#9230a2"/><stop offset="1" stop-color="#f51f78"/></linearGradient>
+<linearGradient id="fio-base2-sun" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#f23748"/><stop offset=".25" stop-color="#ff9b27"/><stop offset=".47" stop-color="#f4c72e"/><stop offset=".69" stop-color="#239b66"/><stop offset=".87" stop-color="#2869b8"/><stop offset="1" stop-color="#943caf"/></linearGradient>
+<linearGradient id="fio-base2-cool" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e92b77"/><stop offset=".25" stop-color="#a23ca9"/><stop offset=".53" stop-color="#324ac1"/><stop offset=".77" stop-color="#148fb0"/><stop offset="1" stop-color="#1b996c"/></linearGradient>
+<filter id="fio-base2-shadow" x="-18%" y="-65%" width="146%" height="250%"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/><feOffset in="blur" dx="1" dy="7" result="offset"/><feComponentTransfer in="offset" result="alpha"><feFuncA type="linear" slope=".2"/></feComponentTransfer><feMerge><feMergeNode in="alpha"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="fio-base2-fibers" x="-10%" y="-15%" width="120%" height="130%"><feTurbulence type="fractalNoise" baseFrequency=".075 .6" numOctaves="2" seed="8" stitchTiles="stitch" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.25" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round" >
+    <path d="M -60 173 C 98 56 212 57 337 135 C 438 198 499 211 553 141 C 591 92 601 72 628 87 C 659 102 646 136 628 157 C 604 183 638 190 681 161 C 811 75 918 66 1065 109" stroke="#532e59" stroke-opacity=".17" stroke-width="32" transform="translate(1 4)"/>
+    <path d="M -60 173 C 98 56 212 57 337 135 C 438 198 499 211 553 141 C 591 92 601 72 628 87 C 659 102 646 136 628 157 C 604 183 638 190 681 161 C 811 75 918 66 1065 109" stroke="url(#fio-base2-cool)" stroke-width="28" filter="url(#fio-base2-fibers)"/>
+    <path d="M -60 173 C 98 56 212 57 337 135 C 438 198 499 211 553 141 C 591 92 601 72 628 87 C 659 102 646 136 628 157 C 604 183 638 190 681 161 C 811 75 918 66 1065 109" stroke="#fff0ce" stroke-opacity=".30" stroke-width="3.9200000000000004" stroke-dasharray="2 5" transform="translate(0 -5.04)"/>
+    <path d="M -60 173 C 98 56 212 57 337 135 C 438 198 499 211 553 141 C 591 92 601 72 628 87 C 659 102 646 136 628 157 C 604 183 638 190 681 161 C 811 75 918 66 1065 109" stroke="#341a4d" stroke-opacity=".18" stroke-width="2.3800000000000003" stroke-dasharray="1.5 4.5" transform="translate(0 5.04)"/>
+    <path d="M -60 173 C 98 56 212 57 337 135 C 438 198 499 211 553 141 C 591 92 601 72 628 87 C 659 102 646 136 628 157 C 604 183 638 190 681 161 C 811 75 918 66 1065 109" stroke="#fff" stroke-opacity=".22" stroke-width="1.54" stroke-dasharray="13 4 2 5" transform="translate(0 -2.38)"/>
+  </g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round" >
+    <path d="M -68 190 C 101 87 207 78 331 125 C 437 163 484 188 549 156 C 646 112 703 67 822 74 C 928 79 979 124 1061 130" stroke="#532e59" stroke-opacity=".17" stroke-width="29" transform="translate(1 4)"/>
+    <path d="M -68 190 C 101 87 207 78 331 125 C 437 163 484 188 549 156 C 646 112 703 67 822 74 C 928 79 979 124 1061 130" stroke="url(#fio-base2-sun)" stroke-width="25" filter="url(#fio-base2-fibers)"/>
+    <path d="M -68 190 C 101 87 207 78 331 125 C 437 163 484 188 549 156 C 646 112 703 67 822 74 C 928 79 979 124 1061 130" stroke="#fff0ce" stroke-opacity=".30" stroke-width="3.5000000000000004" stroke-dasharray="2 5" transform="translate(0 -4.50)"/>
+    <path d="M -68 190 C 101 87 207 78 331 125 C 437 163 484 188 549 156 C 646 112 703 67 822 74 C 928 79 979 124 1061 130" stroke="#341a4d" stroke-opacity=".18" stroke-width="2.125" stroke-dasharray="1.5 4.5" transform="translate(0 4.50)"/>
+    <path d="M -68 190 C 101 87 207 78 331 125 C 437 163 484 188 549 156 C 646 112 703 67 822 74 C 928 79 979 124 1061 130" stroke="#fff" stroke-opacity=".22" stroke-width="1.375" stroke-dasharray="13 4 2 5" transform="translate(0 -2.13)"/>
+  </g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round" >
+    <path d="M -68 201 C 96 107 217 88 331 113 C 438 139 488 167 557 148 C 679 116 708 53 830 59 C 911 62 988 112 1060 118" stroke="#532e59" stroke-opacity=".17" stroke-width="22" transform="translate(1 4)"/>
+    <path d="M -68 201 C 96 107 217 88 331 113 C 438 139 488 167 557 148 C 679 116 708 53 830 59 C 911 62 988 112 1060 118" stroke="url(#fio-base2-rainbow)" stroke-width="18" filter="url(#fio-base2-fibers)"/>
+    <path d="M -68 201 C 96 107 217 88 331 113 C 438 139 488 167 557 148 C 679 116 708 53 830 59 C 911 62 988 112 1060 118" stroke="#fff0ce" stroke-opacity=".30" stroke-width="2.5200000000000005" stroke-dasharray="2 5" transform="translate(0 -3.24)"/>
+    <path d="M -68 201 C 96 107 217 88 331 113 C 438 139 488 167 557 148 C 679 116 708 53 830 59 C 911 62 988 112 1060 118" stroke="#341a4d" stroke-opacity=".18" stroke-width="1.53" stroke-dasharray="1.5 4.5" transform="translate(0 3.24)"/>
+    <path d="M -68 201 C 96 107 217 88 331 113 C 438 139 488 167 557 148 C 679 116 708 53 830 59 C 911 62 988 112 1060 118" stroke="#fff" stroke-opacity=".22" stroke-width="1" stroke-dasharray="13 4 2 5" transform="translate(0 -1.53)"/>
+  </g>
+</svg>
