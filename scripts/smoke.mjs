@@ -62,7 +62,7 @@ try{
   const openedIssues=await admin.evaluate(()=>window.__openedIssues);
   assert.equal(openedIssues.length,1);
   assert.match(openedIssues[0],/issues\/new/);
-  assert.match(decodeURIComponent(openedIssues[0]),/Revisar fios da arte/);
+  assert.match(new URL(openedIssues[0]).searchParams.get("body"),/Revisar fios da arte/);
   await admin.screenshot({path:"preview-screenshots/curadoria-modal.png"});
   await admin.locator("#dialog-close").click();
   await admin.screenshot({path:"preview-screenshots/curadoria-gallery.png"});
