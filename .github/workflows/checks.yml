@@ -42,7 +42,7 @@ jobs:
             if(item.status==='aprovado' && item.path && !item.path.startsWith('https://') && !fs.existsSync(item.path)) throw Error('Imagem ausente: '+item.path);
           }
           for(const item of review.items){
-            if(!/^https:\/\/raw.githubusercontent.com\//.test(item.image)) throw Error('Fonte inválida: '+item.path);
+            if(item.image!==null && (!item.image.startsWith('assets/') || !fs.existsSync(item.image))) throw Error('Fonte pública inválida: '+item.path);
           }
           const index=fs.readFileSync('index.html','utf8');
           if(!index.includes('id="acervo"')||!index.includes('id="experiencia"')) throw Error('Seções essenciais ausentes');
