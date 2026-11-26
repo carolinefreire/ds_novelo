@@ -32,15 +32,17 @@ Este repositório não deve modificar o aplicativo nem o repositório principal 
 - Mockups demonstrativos identificados como tal, até a incorporação dos originais.
 - Público vê o que foi aprovado; a aprovação e a exclusão exigem autorização.
 
-## Curadoria visual pública (somente Issues)
+## Curadoria visual pública baseada no JSON original
 
-- `curadoria.html` apresenta os 27 itens do inventário com miniaturas **quando o arquivo já está publicado** no DS. Imagens pendentes do repositório privado não são expostas em Pages.
-- Clicar em uma imagem abre uma visualização ampliada. Se o original for privado, a página explica a indisponibilidade em vez de apresentar uma imagem diferente.
-- O único botão de solicitação é **Abrir Issue de ajuste**. Qualquer visitante com conta GitHub pode registrar uma observação pública.
-- **Abrir Issues não aprova, desaprova, exclui nem modifica qualquer arquivo.** A automação de curadoria não reage mais a Issues e tem permissões somente de leitura.
-- Toda decisão de publicação ou exclusão exige uma operação administrativa separada e explicitamente autorizada.
-- A antiga automação de aprovar/desaprovar por Issue foi desativada, inclusive para a proprietária. O script histórico em `scripts/curadoria.mjs` não é executado por Issues.
-- Para importar logo e fio oficiais já aprovados do repositório privado, existe fluxo separado `sync-assets.yml`, acionado com autorização. O segredo `NOVELO_GITHUB_TOKEN` não fica exposto no HTML.
+- Fonte integral e imutável: `data/curadoria-original-2026-11-24.json` (último JSON enviado pela proprietária, com 92 registros, 12 aprovados, 14 reprovados e 66 pendentes).
+- A galeria em `curadoria.html` lista exatamente 27 arquivos gráficos, 52 ícones Lucide e 13 elementos/categorias de estilo/código, incluindo **os comentários originais e o estado exato** de cada registro.
+- As 27 imagens do repositório principal foram inventariadas. O DS publica prévias das artes (inclusive rejeitadas, apenas para avaliação, por autorização expressa da proprietária) sem alterar os originais nem promover seu status. O logotipo PNG original ainda exige sincronização binária segura.
+- Ícones importados em `lucide-react` são visualizados via SVG da distribuição Lucide; variáveis de cor e componentes visuais são exibidos conforme os valores e traçados do CSS/React de origem.
+- **Única ação pública: Abrir Issue de ajuste**. Não há botões Aprovar ou Desaprovar; o workflow de Issues não tem gatilho de escrita, e comentários nunca modificam arquivos automaticamente.
+- Rejeições e observações históricas são visíveis, mas exclusão de arquivos só ocorre em processo administrativo separado, mediante autorização.
+- O arquivo `data/review-catalog.json` é histórico e não serve mais como fonte principal da galeria.
+- As ilustrações PNG geradas nas conversas e ainda ausentes do repositório principal são um inventário distinto; não estão cobertas pelo JSON de 92 itens e requerem importação dos arquivos originais para aparecer no site, incluindo a família final da Issue #10.
+- A publicação oficial usa `.github/workflows/pages.yml`. O fluxo Jekyll legado não deve fazer deploy automático paralelo.
 
 ### Limitação de privacidade
 
