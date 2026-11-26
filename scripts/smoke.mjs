@@ -75,7 +75,12 @@ try{
   assert.ok(await admin.locator(".review-thumb img.asset-image").count()>=26,"File thumbnail elements should be present");
   await admin.locator("#kind-filter").selectOption("todos");
   await admin.locator("#collection-filter").selectOption("historico");
-  await admin.waitForFunction(()=>document.querySelectorAll(".review-card").length===95,{timeout:90000});
+  try {
+    await admin.waitForFunction(()=>document.querySelectorAll(".review-card").length===95,null,{timeout:25000});
+  } catch (error) {
+    console.log("HISTÓRICO DIAGNÓSTICO",await admin.locator("#status").textContent(),errors);
+    throw error;
+  }
   assert.equal(await admin.locator(".review-card").count(),95,"All 95 historical images must be visible");
   const historical=admin.locator(".review-card .asset-image").first();
   assert.equal(await historical.evaluate(img=>img.complete&&img.naturalWidth>0),true,"Historical preview must be rendered");
