@@ -26,18 +26,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  publicar:
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+  preparar:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Montar site estático
+      - name: Montar site estatico
         run: |
           mkdir -p _site
           cp index.html curadoria.html styles.css curadoria.css app.js curadoria.js _site/
@@ -46,10 +41,20 @@ jobs:
           test -s _site/index.html
           test -s _site/data/acervo.json
           test -s _site/data/curadoria-original-2026-11-24.json
+          test -s _site/data/historico-manifest.json
           node --check _site/curadoria.js
       - uses: actions/upload-pages-artifact@v3
         with:
           path: '_site'
+
+  publicar:
+    needs: preparar
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - name: Publicar no GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
