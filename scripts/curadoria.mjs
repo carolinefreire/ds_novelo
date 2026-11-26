@@ -165,6 +165,7 @@ async function approve(params,issueNumber){
   const local="assets/aprovados/"+category+"/"+target.split("/").at(-1);
   await writeFile(ghToken,dsRepo,local,current.bytes,"assets(ds): publicar original aprovado "+filename);
   await addCatalogue(params.arquivo,local,params.categoria,current.sha);
+  await updateReviewCatalog(params.arquivo,"aprovar");
   await appendHistory({action:"aprovar",sourcePath:params.arquivo,publishedPath:target,issueNumber,when:new Date().toISOString(),actor:admin});
   await comment(issueNumber,"✅ **Aprovação concluída.** Original preservado. Cópia publicada em \`"+target+"\` e incluída no acervo público do Design System.");
   await close(issueNumber);
@@ -181,6 +182,7 @@ async function reject(params,issueNumber){
   // Exclusão em main é imediata após verificação. O Git preserva histórico e SHA.
   await deleteFile(appToken,appRepo,params.arquivo,original.sha,"chore(curadoria): desaprovar "+params.arquivo+" (issue "+issueNumber+")");
   await removeCatalogue(params.arquivo);
+  await updateReviewCatalog(params.arquivo,"desaprovar");
   await appendHistory({action:"desaprovar",sourcePath:params.arquivo,deleted:true,sourceSha:original.sha,issueNumber,when:new Date().toISOString(),actor:admin});
   await comment(issueNumber,"✅ **Desaprovação concluída.** Arquivo excluído da \`main\` do aplicativo após a verificação de referências. Versão recuperável no histórico Git.");
   await close(issueNumber);
