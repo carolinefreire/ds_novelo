@@ -5,6 +5,8 @@ const repo = "carolinefreire/ds_novelo";
 const source = "carolinefreire/novelo";
 let items = [], historyItems = [], selected = null, focusOrigin = null, originalDocument = null;
 let historyLoaded=false, historyLoading=null, historyError="";
+const PAGE_SIZE=12;
+let currentPage=1;
 const storageKey = "novelo-ds-curadoria-notas/v3";
 let notes = {};
 try {
@@ -171,7 +173,7 @@ function render(){
   const status=$("filter").value;
   const kind=$("kind-filter").value;
   const collection=$("collection-filter").value;
-  const pool=collection==="historico"?historyItems:collection==="todos"?[...items,...historyItems]:items;
+  const pool=collection==="historico"?historyItems:collection==="todos"?[...historyItems,...items]:items;
   const visible=pool.filter(item=>
     (status==="todos"||item.status===status) &&
     (kind==="todos"||item.kind===kind) &&
@@ -182,12 +184,18 @@ function render(){
     "Acervo completo: 92 registros do JSON + "+historyItems.length+" de 95 imagens históricas";
   $("status").textContent=visible.length+" itens exibidos · "+subtitle+(historyLoading?" · carregando prévias…":"")+
     (historyError?" · "+historyError:"")+" · Issues não alteram arquivos";
+  const pageCount=Math.max(1,Math.ceil(visible.length/PAGE_SIZE));
+  currentPage=Math.max(1,Math.min(currentPage,pageCount));
+  $("page-label").textContent="Página "+currentPage+" de "+pageCount+" · "+visible.length+" resultados";
+  $("page-prev").disabled=currentPage<=1;
+  $("page-next").disabled=currentPage>=pageCount;
+  const pageItems=visible.slice((currentPage-1)*PAGE_SIZE,currentPage*PAGE_SIZE);
   const grid=$("admin-gallery");grid.replaceChildren();
   if(!visible.length){
     grid.append(E("p","",historyLoading?"Carregando imagens…":"Nenhum item encontrado."));
     return;
   }
-  for(const item of visible){
+  for(const item of pageItems){
     const card=E("article","review-card");
     const thumb=E("button","review-thumb");thumb.type="button";
     thumb.setAttribute("aria-label","Ampliar "+item.name);
@@ -230,12 +238,13 @@ async function ensureHistory(){
   return historyLoading;
 }
 function collectionChanged(){
+  currentPage=1;
   const c=$("collection-filter").value;
   if(c!=="json")ensureHistory();
   render();
 }
-$("search").addEventListener("input",render);
-$("filter").addEventListener("change",render);
+$("search").addEventListener("input",()=>{currentPage=1;render();});
+$("filter").addEventListener("change",()=>{currentPage=1;render();});
 $("kind-filter").addEventListener("change",()=>{
   const kind=$("kind-filter").value;
   if(kind==="historico")$("collection-filter").value="historico";
@@ -243,6 +252,8 @@ $("kind-filter").addEventListener("change",()=>{
   collectionChanged();
 });
 $("collection-filter").addEventListener("change",collectionChanged);
+$("page-prev").addEventListener("click",()=>{if(currentPage>1){currentPage--;render();$("status").scrollIntoView({behavior:"smooth",block:"start"});}});
+$("page-next").addEventListener("click",()=>{currentPage++;render();$("status").scrollIntoView({behavior:"smooth",block:"start"});});
 $("export").addEventListener("click",()=>{
   const data={...originalDocument,exportedWithNotesAt:new Date().toISOString(),
     exportNote:"O original de 24/11/2026 foi preservado. Notas adicionais ficam em reviewNotes; criar Issues não muda o repositório.",
@@ -265,6 +276,7 @@ fetch("data/curadoria-original-2026-11-24.json",{cache:"no-store"}).then(async r
   $("reprovados").textContent=String(items.filter(i=>i.status==="reprovado").length);
   $("pendentes").textContent=String(items.filter(i=>i.status==="pendente").length);
   render();
+  if($("collection-filter").value!=="json")void ensureHistory();
 }).catch(error=>{
   $("status").textContent="Não foi possível carregar os 92 registros do JSON original: "+error.message;
 });
