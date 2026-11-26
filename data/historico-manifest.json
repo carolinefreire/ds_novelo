@@ -1,0 +1,23 @@
+{
+  "schema": "novelo-historico-manifest/v1",
+  "total": 95,
+  "batchFiles": [
+    "data/historico-01.json",
+    "data/historico-02.json",
+    "data/historico-03.json",
+    "data/historico-04.json",
+    "data/historico-05.json",
+    "data/historico-06.json",
+    "data/historico-07.json",
+    "data/historico-08.json",
+    "data/historico-09.json",
+    "data/historico-10.json"
+  ],
+  "source": "95 imagens locais de ilustrações, mockups e referências de design. Capturas técnicas de configurações não são publicadas.",
+  "pixelPolicy": "Prévias WebP reduzidas. Originais mantidos fora do repositório; nenhuma imagem foi aprovada por esta publicação.",
+  "categories": {
+    "Ilustrações e cenas": 52,
+    "Mockups e telas": 38,
+    "Referências e capturas de design": 5
+  }
+}
