@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="t"><title id="t">Retrato ilustrado de candidata</title>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe7bf"/><stop offset="1" stop-color="#ffca9b"/></linearGradient><linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b448ae"/><stop offset="1" stop-color="#702b7d"/></linearGradient><clipPath id="circle"><circle cx="64" cy="64" r="59"/></clipPath></defs>
+<circle cx="64" cy="64" r="62" fill="#fff7ec" stroke="#fff1e2" stroke-width="3"/>
+<g clip-path="url(#circle)"><circle cx="64" cy="64" r="59" fill="url(#bg)"/><path d="M6 127q1-57 58-57t59 57" fill="url(#top)"/>
+<g fill="#33232b"><circle cx="38" cy="42" r="19"/><circle cx="53" cy="30" r="19"/><circle cx="73" cy="31" r="19"/><circle cx="91" cy="41" r="19"/><circle cx="95" cy="63" r="16"/><circle cx="34" cy="65" r="16"/></g>
+<ellipse cx="64" cy="64" rx="31" ry="36" fill="#ac603c"/>
+<path d="M43 62q8 8 15 0m13 0q8 8 16 0" fill="none" stroke="#492533" stroke-width="3.7" stroke-linecap="round"/>
+<path d="M53 79q11 13 23 0" fill="none" stroke="#713341" stroke-width="4" stroke-linecap="round"/>
+<circle cx="38" cy="81" r="8" fill="none" stroke="#f9bb37" stroke-width="4.5"/></g>
+</svg>
