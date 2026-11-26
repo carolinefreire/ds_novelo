@@ -2,111 +2,164 @@
 "use strict";
 const $ = id => document.getElementById(id);
 const repo = "carolinefreire/ds_novelo";
-let items = [];
-let selected = null;
-let selectedButton = null;
+let items = [], selected = null, focusOrigin = null;
 const storageKey = "novelo-ds-curadoria-notas/v2";
 let notes = {};
-try { const saved = JSON.parse(localStorage.getItem(storageKey) || "{}"); if(saved && typeof saved==="object") notes=saved; } catch {}
-function E(tag,cls,value){const n=document.createElement(tag);if(cls)n.className=cls;if(value!==undefined)n.textContent=value;return n;}
-function noteFor(i){return typeof notes[i.path]==="string"?notes[i.path]:"";}
-function saveNote(i,note){notes[i.path]=note;try{localStorage.setItem(storageKey,JSON.stringify(notes));}catch{}}
-function isApproved(i){return i.status==="aprovado"}
-function readable(i){return isApproved(i)?"Aprovada":i.status==="reprovado_historico"?"Rejeitada em uso anterior":"Pendente"}
-function dialogClose(){if($("action-dialog").open)$("action-dialog").close();if(selectedButton)selectedButton.focus();}
-function openDialog(item,button){
-  selected=item;selectedButton=button;
-  $("dialog-title").textContent=item.name;
-  $("dialog-category").textContent=item.category+" · "+readable(item);
-  const preview=$("dialog-preview"),locked=$("private-preview");
-  if(item.image){preview.src=item.image;preview.alt=item.name;preview.style.display="block";locked.hidden=true;}
-  else{preview.removeAttribute("src");preview.style.display="none";locked.hidden=false;$("private-view").href="https://github.com/carolinefreire/novelo/blob/main/"+item.path.split("/").map(encodeURIComponent).join("/");}
-  $("dialog-note").value=noteFor(item);
-  $("dialog-help").textContent="O GitHub solicitará seu login e a confirmação antes de registrar esta decisão.";
+try {
+  const value = JSON.parse(localStorage.getItem(storageKey) || "{}");
+  if (value && typeof value === "object" && !Array.isArray(value)) notes = value;
+} catch {}
+const E = (tag, cls, value) => {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (value !== undefined) node.textContent = value;
+  return node;
+};
+const isApproved = item => item.status === "aprovado";
+const readable = item => isApproved(item) ? "Aprovada" :
+  item.status === "reprovado_historico" ? "Rejeitada anteriormente" : "Pendente";
+const privateUrl = item => "https://github.com/carolinefreire/novelo/blob/main/" +
+  item.path.split("/").map(encodeURIComponent).join("/");
+function closeDialog() {
+  if ($("action-dialog").open) $("action-dialog").close();
+  focusOrigin?.focus();
+}
+function setPreview(img, item, fallback) {
+  img.alt = item.name;
+  img.loading = "lazy";
+  img.onerror = () => {
+    img.hidden = true;
+    fallback.hidden = false;
+  };
+  if (item.image) {
+    img.hidden = false;
+    img.src = item.image;
+    fallback.hidden = true;
+  } else {
+    img.removeAttribute("src");
+    img.hidden = true;
+    fallback.hidden = false;
+  }
+}
+function openDialog(item, origin) {
+  selected = item;
+  focusOrigin = origin;
+  $("dialog-title").textContent = item.name;
+  $("dialog-category").textContent = item.category + " · " + readable(item);
+  const img = $("dialog-preview"), unavailable = $("private-preview");
+  setPreview(img, item, unavailable);
+  // This link needs GitHub authorization, since the original repository is private.
+  $("private-view").href = privateUrl(item);
+  $("dialog-note").value = typeof notes[item.path] === "string" ? notes[item.path] : "";
+  $("dialog-help").textContent = "A Issue registra seu pedido, sem alterar arquivos ou decisões.";
   $("action-dialog").showModal();
   $("dialog-close").focus();
 }
-function issueUrl(item,action,note){
-  const machine = [
-    "<!-- NOVELO_CURADORIA_V1",
-    "acao="+action,
-    "repo=carolinefreire/novelo",
-    "arquivo="+item.path,
-    "categoria="+item.category.replace(/[\r\n=]/g,""),
-    "-->"
+function issueUrl(item, note) {
+  const original = item.path;
+  const body = [
+    "## Solicitação de ajuste · Design System Novelo",
+    "",
+    "**Imagem:** " + item.name,
+    "**Arquivo de origem:** `" + original + "`",
+    "**Categoria:** " + item.category,
+    "**Estado exibido:** " + readable(item),
+    "**Prévia pública:** " + (item.image ?
+      "https://carolinefreire.github.io/ds_novelo/" + item.image : "Ainda não disponível"),
+    "",
+    "### Ajuste ou observação",
+    note,
+    "",
+    "> Este registro é uma sugestão pública. Não aprova, exclui nem modifica código ou imagens. A responsável revisará manualmente."
   ].join("\n");
-  const actionName={aprovar:"Aprovar",desaprovar:"Desaprovar",ajustar:"Ajustar"}[action];
-  const text=[
-    "### "+actionName+" · Design System Novelo",
-    "**Arquivo original:** \`"+item.path+"\`",
-    "**Situação no catálogo:** "+readable(item),
-    "**Visualização:** "+(item.image || "https://github.com/carolinefreire/novelo/blob/main/"+item.path),
-    "",
-    "### Comentário",
-    note.trim()||"Sem observações adicionais.",
-    "",
-    "### Registro de decisão (não editar)",
-    machine,
-    "",
-    "> Só solicitações criadas por carolinefreire podem executar alterações automáticas. Ajustar registra o pedido para revisão visual, mas não gera a imagem sozinho."
-  ].join("\n");
-  return "https://github.com/"+repo+"/issues/new?"+
-   new URLSearchParams({title:"[Curadoria] "+actionName+" · "+item.name,body:text}).toString();
+  return "https://github.com/" + repo + "/issues/new?" +
+    new URLSearchParams({title:"[Curadoria] Ajuste · " + item.name,body}).toString();
 }
-function submitAction(action){
-  if(!selected)return;
-  const note=$("dialog-note").value.trim();
-  if(action==="ajustar"&&!note){
-    $("dialog-help").textContent="Descreva a alteração antes de abrir a solicitação.";
-    $("dialog-note").focus();return;
+$("alter").addEventListener("click", () => {
+  if (!selected) return;
+  const note = $("dialog-note").value.trim();
+  if (!note) {
+    $("dialog-help").textContent = "Escreva o ajuste ou observação para abrir a Issue.";
+    $("dialog-note").focus();
+    return;
   }
-  if(action==="desaprovar"&&!window.confirm("Confirmar o pedido de exclusão do arquivo selecionado? O GitHub bloqueará arquivos protegidos ou usados no app."))return;
-  saveNote(selected,note);
-  const url=issueUrl(selected,action,note);
-  window.open(url,"_blank","noopener,noreferrer");
-  $("dialog-help").textContent="Solicitação preparada e aberta no GitHub. O status só muda depois do envio e da confirmação no repositório.";
-}
-$("approve").addEventListener("click",()=>submitAction("aprovar"));
-$("reject").addEventListener("click",()=>submitAction("desaprovar"));
-$("alter").addEventListener("click",()=>submitAction("ajustar"));
-$("dialog-close").addEventListener("click",dialogClose);
-$("action-dialog").addEventListener("click",event=>{if(event.target===$("action-dialog"))dialogClose();});
-function render(){
-  const term=$("search").value.trim().toLocaleLowerCase("pt-BR");
-  const status=$("filter").value;
-  const visible=items.filter(i=>{
-    const matches=status==="todos"||(status==="aprovado"?isApproved(i):!isApproved(i));
-    return matches&&[i.name,i.category,i.path,i.notes||""].join(" ").toLocaleLowerCase("pt-BR").includes(term);
-  });
-  $("status").textContent=visible.length+" de "+items.length+" arquivos públicos · somente decisões autorizadas são executadas";
-  const grid=$("admin-gallery");grid.replaceChildren();
-  if(!visible.length){grid.append(E("p","","Nenhum arquivo encontrado."));return;}
-  for(const item of visible){
-    const card=E("article","review-card");
-    const imageButton=E("button","review-thumb");imageButton.type="button";imageButton.setAttribute("aria-label","Ampliar "+item.name);
-    if(item.image){const image=E("img");image.src=item.image;image.alt=item.name;image.loading="lazy";imageButton.append(image);}
-    else{imageButton.append(E("div","review-locked","🔒 Original no repositório privado"));}
-    imageButton.addEventListener("click",()=>openDialog(item,imageButton));
-    const data=E("div","review-details");
+  notes[selected.path] = note;
+  try { localStorage.setItem(storageKey, JSON.stringify(notes)); } catch {}
+  window.open(issueUrl(selected, note), "_blank", "noopener,noreferrer");
+  $("dialog-help").textContent = "Issue preparada. Confirme o envio na página do GitHub. Nada é alterado automaticamente.";
+});
+$("dialog-close").addEventListener("click", closeDialog);
+$("action-dialog").addEventListener("click", event => {
+  if (event.target === $("action-dialog")) closeDialog();
+});
+function render() {
+  const term = $("search").value.trim().toLocaleLowerCase("pt-BR");
+  const status = $("filter").value;
+  const visible = items.filter(item =>
+    (status === "todos" || (status === "aprovado" ? isApproved(item) : !isApproved(item))) &&
+    [item.name,item.category,item.path,item.notes || ""].join(" ").toLocaleLowerCase("pt-BR").includes(term)
+  );
+  const renderable = items.filter(item => Boolean(item.image)).length;
+  $("status").textContent = visible.length + " de " + items.length +
+    " itens · " + renderable + " com arquivos de prévia publicados · Issues não alteram o repositório";
+  const grid = $("admin-gallery");
+  grid.replaceChildren();
+  if (!visible.length) {
+    grid.append(E("p", "", "Nenhum arquivo encontrado."));
+    return;
+  }
+  for (const item of visible) {
+    const card = E("article","review-card");
+    const thumb = E("button","review-thumb");
+    thumb.type = "button";
+    thumb.setAttribute("aria-label", "Ampliar " + item.name);
+    const image = E("img");
+    const unavailable = E("div","review-locked","Prévia indisponível · original privado");
+    thumb.append(image, unavailable);
+    setPreview(image,item,unavailable);
+    thumb.addEventListener("click",() => openDialog(item,thumb));
+    const data = E("div","review-details");
     data.append(E("span","review-label",item.category),E("h2","",item.name),E("p","",item.path));
-    const chip=E("span","review-status "+(isApproved(item)?"is-approved":item.status==="reprovado_historico"?"is-rejected":""),readable(item));data.append(chip);
-    if(item.notes)data.append(E("p","",item.notes));
-    const act=E("button","review-open","Ver e decidir ↗");act.type="button";act.addEventListener("click",()=>openDialog(item,act));data.append(act);
-    card.append(imageButton,data);grid.append(card);
+    data.append(E("span","review-status " + (isApproved(item) ? "is-approved" :
+      item.status === "reprovado_historico" ? "is-rejected" : ""), readable(item)));
+    if (item.notes) data.append(E("p","",item.notes));
+    const open = E("button","review-open",item.image ? "Ampliar e abrir Issue ↗" : "Detalhes e abrir Issue ↗");
+    open.type = "button";
+    open.addEventListener("click",() => openDialog(item,open));
+    data.append(open);
+    card.append(thumb,data);
+    grid.append(card);
   }
 }
 $("search").addEventListener("input",render);
 $("filter").addEventListener("change",render);
-$("export").addEventListener("click",()=>{
-  const exportData={schema:"novelo-ds-curadoria-export/v2",repository:repo,exportedAt:new Date().toISOString(),statusExplanation:"Exportação local; ações do GitHub só são efetivadas após envio e autorização.",items:items.map(i=>({...i,note:noteFor(i)}))};
-  const href=URL.createObjectURL(new Blob([JSON.stringify(exportData,null,2)],{type:"application/json"}));
-  const anchor=E("a");anchor.href=href;anchor.download="novelo-ds-curadoria.json";document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(href),2000);
+$("export").addEventListener("click", () => {
+  const data = {
+    schema:"novelo-ds-curadoria-export/v3",repository:repo,
+    exportedAt:new Date().toISOString(),
+    statusExplanation:"Exportação consultiva; registros de ajuste são feitos somente por Issues e nunca alteram arquivos automaticamente.",
+    items:items.map(item => ({...item,note:typeof notes[item.path] === "string" ? notes[item.path] : ""}))
+  };
+  const href = URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"}));
+  const anchor = E("a");
+  anchor.href = href;
+  anchor.download = "novelo-ds-curadoria.json";
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  setTimeout(() => URL.revokeObjectURL(href),2000);
 });
-fetch("data/review-catalog.json",{cache:"no-cache"}).then(async r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json();}).then(data=>{
-  if(!Array.isArray(data.items))throw Error("Catálogo inválido");
-  items=data.items;$("total").textContent=String(items.length);
-  $("aprovados").textContent=String(items.filter(isApproved).length);
-  $("pendentes").textContent=String(items.filter(i=>!isApproved(i)).length);
+fetch("data/review-catalog.json",{cache:"no-cache"}).then(async response => {
+  if (!response.ok) throw Error("HTTP " + response.status);
+  return response.json();
+}).then(data => {
+  if (!Array.isArray(data.items)) throw Error("Catálogo inválido");
+  items = data.items;
+  $("total").textContent = String(items.length);
+  $("aprovados").textContent = String(items.filter(isApproved).length);
+  $("pendentes").textContent = String(items.filter(item => !isApproved(item)).length);
   render();
-}).catch(()=>{$("status").textContent="Não foi possível carregar o catálogo. Acesse o site pelo GitHub Pages em vez de abrir o HTML diretamente.";});
+}).catch(() => {
+  $("status").textContent = "Não foi possível carregar o catálogo. Acesse o site publicado no GitHub Pages.";
+});
 })();
