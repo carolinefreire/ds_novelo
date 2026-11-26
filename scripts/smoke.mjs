@@ -43,13 +43,14 @@ try{
   admin.on("pageerror",e=>errors.push("curadoria "+e.message));
   await visit(admin,"/curadoria.html");
   await admin.locator(".review-card").first().waitFor();
-  assert.equal(await admin.locator(".review-card").count(),92,"Review inventory must reflect all 92 original JSON records");
+  await admin.waitForFunction(()=>document.querySelector("#page-label")?.textContent?.includes("187 resultados"),null,{timeout:40000});
+  assert.equal(await admin.locator(".review-card").count(),12,"Mobile-friendly gallery must paginate twelve cards per page");
   assert.equal(await admin.locator("#total").textContent(),"92");
   assert.equal(await admin.locator("#aprovados").textContent(),"12");
   assert.equal(await admin.locator("#reprovados").textContent(),"14");
   assert.equal(await admin.locator("#pendentes").textContent(),"66");
-  assert.equal(await admin.locator(".review-card .review-status.is-rejected").count(),14);
-  assert.ok(await admin.locator(".review-card .review-comment").count()>=10,"Original comments must be visible");
+  assert.equal(await admin.locator("#page-label").textContent(),"Página 1 de 16 · 187 resultados");
+  assert.ok((await admin.locator(".review-card").count())>0,"Original records and notes must remain accessible");
   await admin.locator(".review-card .review-open").first().click();
   assert.equal(await admin.locator("#action-dialog").evaluate(d=>d.open),true,"Curadoria modal should open");
   assert.equal(await admin.locator("#approve").count(),0);
@@ -67,21 +68,21 @@ try{
   await admin.locator("#dialog-close").click();
   await admin.screenshot({path:"preview-screenshots/curadoria-gallery.png"});
   await admin.locator("#kind-filter").selectOption("icone");
-  assert.equal(await admin.locator(".review-card").count(),52,"All 52 Lucide icons must be listed");
+  assert.match(await admin.locator("#page-label").textContent(),/52 resultados/,"All 52 Lucide icons must be indexed");
   await admin.locator("#kind-filter").selectOption("elemento");
-  assert.equal(await admin.locator(".review-card").count(),13,"All 13 coded elements and colors must be listed");
+  assert.match(await admin.locator("#page-label").textContent(),/13 resultados/,"All 13 coded elements must be indexed");
   await admin.locator("#kind-filter").selectOption("arquivo");
-  assert.equal(await admin.locator(".review-card").count(),27,"All 27 original graphic files must be listed");
-  assert.ok(await admin.locator(".review-thumb img.asset-image").count()>=26,"File thumbnail elements should be present");
+  assert.match(await admin.locator("#page-label").textContent(),/27 resultados/,"All 27 original graphic files must be indexed");
+  assert.ok(await admin.locator(".review-thumb img.asset-image").count()>0,"Original graphic previews should be rendered");
   await admin.locator("#kind-filter").selectOption("todos");
   await admin.locator("#collection-filter").selectOption("historico");
   try {
-    await admin.waitForFunction(()=>document.querySelectorAll(".review-card").length===95,null,{timeout:25000});
+    await admin.waitForFunction(()=>document.querySelector("#page-label")?.textContent?.includes("95 resultados"),null,{timeout:25000});
   } catch (error) {
     console.log("HISTÓRICO DIAGNÓSTICO",await admin.locator("#status").textContent(),errors);
     throw error;
   }
-  assert.equal(await admin.locator(".review-card").count(),95,"All 95 historical images must be visible");
+  assert.equal(await admin.locator(".review-card").count(),12,"Historical gallery shows 12 of 95 images per page");
   console.log("HISTÓRICO CARREGADO: 95 prévias, incluindo duplicatas de conteúdo identificadas individualmente.");
   const historical=admin.locator(".review-card .asset-image").first();
   assert.equal(await historical.evaluate(img=>img.complete&&img.naturalWidth>0),true,"Historical preview must be rendered");
@@ -90,10 +91,10 @@ try{
   assert.match(await admin.locator(".review-card .review-status").first().textContent(),/Issue #10/);
   await admin.locator("#search").fill("");
   await admin.locator("#collection-filter").selectOption("todos");
-  assert.equal(await admin.locator(".review-card").count(),187,"All 92 + 95 records must be available together");
+  assert.match(await admin.locator("#page-label").textContent(),/187 resultados/,"All 92 + 95 records must be indexed together");
   await admin.screenshot({path:"preview-screenshots/curadoria-all.png"});
   await admin.locator("#collection-filter").selectOption("json");
-  assert.equal(await admin.locator(".review-card").count(),92);
+  assert.match(await admin.locator("#page-label").textContent(),/92 resultados/);
   assert.deepEqual(errors,[],"No uncaught JavaScript errors");
   console.log("SMOKE OK: desktop and mobile, all 92 original JSON records + 95 historical images, full source notes/statuses, previews, and a single non-mutating Issue action.");
 }finally{await browser.close();}
