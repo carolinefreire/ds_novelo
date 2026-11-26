@@ -73,6 +73,21 @@ try{
   await admin.locator("#kind-filter").selectOption("arquivo");
   assert.equal(await admin.locator(".review-card").count(),27,"All 27 original graphic files must be listed");
   assert.ok(await admin.locator(".review-thumb img.asset-image").count()>=26,"File thumbnail elements should be present");
+  await admin.locator("#kind-filter").selectOption("todos");
+  await admin.locator("#collection-filter").selectOption("historico");
+  await admin.waitForFunction(()=>document.querySelectorAll(".review-card").length===95,{timeout:90000});
+  assert.equal(await admin.locator(".review-card").count(),95,"All 95 historical images must be visible");
+  const historical=admin.locator(".review-card .asset-image").first();
+  assert.equal(await historical.evaluate(img=>img.complete&&img.naturalWidth>0),true,"Historical preview must be rendered");
+  await admin.locator("#search").fill("a_vibrant_detailed_crochet_amigurumi_style_illust.png");
+  assert.equal(await admin.locator(".review-card").count(),1,"Approved issue 10 historical image must be included");
+  assert.match(await admin.locator(".review-card .review-status").first().textContent(),/Issue #10/);
+  await admin.locator("#search").fill("");
+  await admin.locator("#collection-filter").selectOption("todos");
+  assert.equal(await admin.locator(".review-card").count(),187,"All 92 + 95 records must be available together");
+  await admin.screenshot({path:"preview-screenshots/curadoria-all.png"});
+  await admin.locator("#collection-filter").selectOption("json");
+  assert.equal(await admin.locator(".review-card").count(),92);
   assert.deepEqual(errors,[],"No uncaught JavaScript errors");
-  console.log("SMOKE OK: desktop and mobile, all 92 JSON records, source notes/statuses, 27 artwork files, 52 Lucide icons, 13 elements, and a single non-mutating Issue button.");
+  console.log("SMOKE OK: desktop and mobile, all 92 original JSON records + 95 historical images, full source notes/statuses, previews, and a single non-mutating Issue action.");
 }finally{await browser.close();}
