@@ -89,6 +89,20 @@ async function addCatalogue(sourcePath, localPath, category, sha){
   catalog.updatedAt=new Date().toISOString();
   await writeFile(ghToken,dsRepo,path,Buffer.from(JSON.stringify(catalog,null,2)+"\n"),"data(ds): incluir arte aprovada "+name);
 }
+async function updateReviewCatalog(sourcePath, action) {
+  const path="data/review-catalog.json";
+  const catalog=await readJson(ghToken,dsRepo,path,{items:[]});
+  if(!Array.isArray(catalog.items))throw Error("Inventário visual inválido.");
+  if(action==="desaprovar"){
+    catalog.items=catalog.items.filter(i=>i.path!==sourcePath);
+  }else{
+    const found=catalog.items.find(i=>i.path===sourcePath);
+    if(found){found.status="aprovado";found.notes="Aprovado pela administradora e publicado no acervo oficial.";}
+  }
+  catalog.updatedAt=new Date().toISOString();
+  await writeFile(ghToken,dsRepo,path,Buffer.from(JSON.stringify(catalog,null,2)+"\n"),
+    "data(curadoria): sincronizar "+action+" "+sourcePath);
+}
 async function removeCatalogue(sourcePath){
   const path="data/acervo.json";
   const catalog=await readJson(ghToken,dsRepo,path,{records:[]});
