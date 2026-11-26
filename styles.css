@@ -123,7 +123,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .phone-status span{letter-spacing:2px}
 .phone-brand{text-align:center;margin-top:37px}
 .phone-brand-title{display:block;font-size:2.5rem;font-weight:800;letter-spacing:-.08em;font-style:italic;background:var(--grad);background-clip:text;-webkit-background-clip:text;color:transparent}
-.phone-brand small{font-size:.54rem;letter-spacing:.06em}
+.phone-brand img{display:block;width:140px;height:65px;object-fit:contain;margin:0 auto}.phone-brand small{font-size:.54rem;letter-spacing:.06em}
 .screen-shape{margin:15px auto 18px;width:155px;height:100px;border-radius:54% 46% 58% 42%;background:linear-gradient(130deg,#ffcfb2,#f5dbe4,#ddc7e7);display:grid;place-items:center}
 .shape-heart{font-size:5.4rem;line-height:1;color:#a2499c}
 .phone-screen h4{font-size:1rem;line-height:1.35;margin:0 0 7px;text-align:center}
