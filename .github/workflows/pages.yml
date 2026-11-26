@@ -1,0 +1,50 @@
+name: Publicar Design System Novelo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'curadoria.html'
+      - 'styles.css'
+      - 'curadoria.css'
+      - 'app.js'
+      - 'curadoria.js'
+      - 'assets/**'
+      - 'data/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Montar site estático
+        run: |
+          mkdir -p _site
+          cp index.html curadoria.html styles.css curadoria.css app.js curadoria.js _site/
+          cp -R assets data _site/
+          touch _site/.nojekyll
+          test -s _site/index.html
+          test -s _site/data/acervo.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+      - name: Publicar no GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
