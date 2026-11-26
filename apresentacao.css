@@ -123,3 +123,14 @@
 @media(max-width:400px){
  .frame{width:min(calc(100vw - 12px),calc((100dvh - 136px)*3/4))}
 }
+
+/* Revisão visual: o painel empresarial é posicionado em relação ao slide, não ao fluxo. */
+.panel-stack{position:absolute;right:5%;top:18%;width:44%;height:65%;z-index:3}
+.trio-image{opacity:.22;right:-12%;top:-38%;width:44%;height:62%}
+.art-yarn{opacity:.12!important;left:-19%;bottom:-32%;width:51%;height:67%;z-index:0!important;filter:none!important}
+.weave-layout .ui-head{position:relative;z-index:5}
+@media(max-width:760px){
+ .panel-stack{width:86%;right:6%;top:auto;bottom:9%;height:48%}
+ .trio-image{display:none}
+ .art-yarn{opacity:.07!important;left:-30%;bottom:-29%;height:46%;width:68%}
+}
