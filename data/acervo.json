@@ -1,0 +1,98 @@
+{
+  "schema": "novelo-ds-acervo/v1",
+  "updatedAt": "2026-11-25",
+  "source": "carolinefreire/novelo",
+  "policy": "Expor no site apenas arquivos com aprovação confirmada. Nunca alterar a obra original.",
+  "records": [
+    {
+      "id": "marca-logo",
+      "name": "Assinatura oficial Novelo",
+      "category": "Marca",
+      "status": "aprovado",
+      "path": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/logo-novelo.png",
+      "source": "public/logo-novelo.png",
+      "caption": "Logotipo oficial, não redesenhado.",
+      "alt": "Logotipo Novelo em fios multicoloridos com a maletinha."
+    },
+    {
+      "id": "joana",
+      "name": "Joana",
+      "category": "Personagens",
+      "status": "aprovado",
+      "path": "assets/joana_voluntaria.svg",
+      "source": "public/brand/personagens/joana_voluntaria.svg",
+      "caption": "Voluntária com síndrome de Down. Versão final em pé.",
+      "alt": "Joana em amigurumi, em pé, com óculos e crachá."
+    },
+    {
+      "id": "rafael",
+      "name": "Rafael",
+      "category": "Personagens",
+      "status": "aprovado",
+      "path": "assets/rafael_voluntario.svg",
+      "source": "public/brand/personagens/rafael_voluntario.svg",
+      "caption": "Voluntário com cadeira de rodas e comunicação alternativa.",
+      "alt": "Rafael em cadeira de rodas, com dispositivo de comunicação."
+    },
+    {
+      "id": "lucia",
+      "name": "Lúcia",
+      "category": "Personagens",
+      "status": "aprovado",
+      "path": "assets/lucia_voluntaria.svg",
+      "source": "public/brand/personagens/lucia_voluntaria.svg",
+      "caption": "Voluntária idosa com deficiência visual.",
+      "alt": "Lúcia em amigurumi, com bengala."
+    },
+    {
+      "id": "diego",
+      "name": "Diego",
+      "category": "Personagens",
+      "status": "aprovado",
+      "path": "assets/diego_voluntario.svg",
+      "source": "public/brand/personagens/diego_voluntario.svg",
+      "caption": "Personagem individual aprovado, com fones de ouvido.",
+      "alt": "Diego com fones de ouvido em crochê."
+    },
+    {
+      "id": "marina",
+      "name": "Marina",
+      "category": "Personagens",
+      "status": "aprovado",
+      "path": "assets/marina_voluntaria.svg",
+      "source": "public/brand/personagens/marina_voluntaria.svg",
+      "caption": "Voluntária surda; personagem individual aprovado.",
+      "alt": "Marina em amigurumi com dispositivo e gesto de comunicação."
+    },
+    {
+      "id": "geracoes",
+      "name": "Três gerações tecendo juntas",
+      "category": "Cenas",
+      "status": "aprovado",
+      "path": "assets/tres-geracoes-tecendo-juntas.svg",
+      "source": "public/brand/tres-geracoes-tecendo-juntas.svg",
+      "caption": "Cena aprovada. A versão SVG do aplicativo usa imagem interna reduzida; preservar o PNG original disponível no acervo.",
+      "alt": "Três gerações em convivência de cuidado, em amigurumi."
+    },
+    {
+      "id": "fio-coracoes",
+      "name": "Fio com corações",
+      "category": "Elementos",
+      "status": "aprovado",
+      "path": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/fio-coracoes.png",
+      "source": "public/fio-coracoes.png",
+      "caption": "Fio de lã oficial com textura realista.",
+      "alt": "Fios de lã coloridos entrelaçados em corações."
+    },
+    {
+      "id": "familia-issue10",
+      "name": "Família Novelo · Issue #10",
+      "category": "Cenas",
+      "status": "aprovado_pendente_de_arquivo",
+      "path": null,
+      "source": "Issue #10, original aprovado em 2026-11-25",
+      "caption": "Versão final aprovada: pin na bolsa da mãe, sem texto e sem broche no pai. Original binário ainda não incorporado ao repositório.",
+      "alt": "Imagem aprovada aguardando inclusão do original."
+    }
+  ]
+}
