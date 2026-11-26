@@ -1,0 +1,1097 @@
+{
+  "schema": "novelo-ds-curadoria/v1",
+  "repository": "carolinefreire/novelo",
+  "treeSha": null,
+  "archiveName": "novelo-main.zip",
+  "archiveCommit": "fbb96df6967320b177ac7432cadd4d2fe1699f03",
+  "exportedAt": "2026-11-24T16:14:07.419Z",
+  "counts": {
+    "pendente": 66,
+    "aprovado": 12,
+    "reprovado": 14
+  },
+  "items": [
+    {
+      "id": "arquivo:public/brand/avatar-candidata.svg",
+      "name": "avatar-candidata.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/avatar-candidata.svg",
+      "size": 1284,
+      "sha": "abddd088b1080bf1afbf19e1e70a983aec2e293d",
+      "status": "reprovado",
+      "note": "O avatar é pra ser mais parecido com os voluntários, tipo novelo "
+    },
+    {
+      "id": "arquivo:public/brand/broto-de-vida.svg",
+      "name": "broto-de-vida.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/broto-de-vida.svg",
+      "size": 686,
+      "sha": "7d97e9df5a3f6ed977f046db1ba6fa7663e4cffb",
+      "status": "reprovado",
+      "note": "Nem sei o que é isso e pra que serve"
+    },
+    {
+      "id": "arquivo:public/brand/coracao-de-fio.svg",
+      "name": "coracao-de-fio.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/coracao-de-fio.svg",
+      "size": 4096,
+      "sha": "50203ba629476b481fc465efa5895d17e257ab86",
+      "status": "reprovado",
+      "note": "Pode apagar"
+    },
+    {
+      "id": "arquivo:public/brand/coracao-fios-laterais.svg",
+      "name": "coracao-fios-laterais.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/coracao-fios-laterais.svg",
+      "size": 4097,
+      "sha": "e0753585dc0071b5a2fc4318394d45fcc5dc4580",
+      "status": "reprovado",
+      "note": "Esse já tem, pode apagar"
+    },
+    {
+      "id": "arquivo:public/brand/elo-mutuo.svg",
+      "name": "elo-mutuo.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/elo-mutuo.svg",
+      "size": 2223,
+      "sha": "aa1b4b169af3fc088c9108486d989e029832fb79",
+      "status": "reprovado",
+      "note": "Mto ruim"
+    },
+    {
+      "id": "arquivo:public/brand/fio-entrelaçado-base.svg",
+      "name": "fio-entrelaçado-base.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/fio-entrelaçado-base.svg",
+      "size": 2271,
+      "sha": "97fd39f423aa45b843453ef5b22441c2c67d317b",
+      "status": "reprovado",
+      "note": "Horrivel, Faça mais bonito, fluido, texturizado de lá também "
+    },
+    {
+      "id": "arquivo:public/brand/fio-entrelaçado-topo.svg",
+      "name": "fio-entrelaçado-topo.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/fio-entrelaçado-topo.svg",
+      "size": 2388,
+      "sha": "e6fdafd69f8a38ed7a93eef5e098b55d09e28c34",
+      "status": "reprovado",
+      "note": "Faça mais bonito, fluido, texturizado de lá também "
+    },
+    {
+      "id": "arquivo:public/brand/formas-organicas.svg",
+      "name": "formas-organicas.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/formas-organicas.svg",
+      "size": 579,
+      "sha": "136f44a50516b1fc3bcae04e458810d495841727",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/maleta-novelo.svg",
+      "name": "maleta-novelo.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/maleta-novelo.svg",
+      "size": 1987,
+      "sha": "88d48fd1e9890f5a99c410904b892aa1fdbd4f70",
+      "status": "reprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/personagem-profissional-cadeira-rodas.svg",
+      "name": "personagem-profissional-cadeira-rodas.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/personagem-profissional-cadeira-rodas.svg",
+      "size": 5318,
+      "sha": "c4bcd630ee1603bb93b34f209f28f9eda09c0fcc",
+      "status": "reprovado",
+      "note": "Pode apagar esse"
+    },
+    {
+      "id": "arquivo:public/brand/personagem-profissional-prancheta.svg",
+      "name": "personagem-profissional-prancheta.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/personagem-profissional-prancheta.svg",
+      "size": 4239,
+      "sha": "36fd2f7375992e7a997a30bd55eeb495f264239b",
+      "status": "reprovado",
+      "note": "Pode apagar esse"
+    },
+    {
+      "id": "arquivo:public/brand/personagens/beatriz_voluntaria.svg",
+      "name": "beatriz_voluntaria.svg",
+      "kind": "arquivo",
+      "category": "Personagens",
+      "path": "public/brand/personagens/beatriz_voluntaria.svg",
+      "size": 282501,
+      "sha": "2c8865875a9295bd78a498de9432286e4ccfcd04",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/personagens/diego_voluntario.svg",
+      "name": "diego_voluntario.svg",
+      "kind": "arquivo",
+      "category": "Personagens",
+      "path": "public/brand/personagens/diego_voluntario.svg",
+      "size": 197556,
+      "sha": "8e6288c88d3cfd024ad9aa5c97eef27ce74462ea",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/personagens/joana_voluntaria.svg",
+      "name": "joana_voluntaria.svg",
+      "kind": "arquivo",
+      "category": "Personagens",
+      "path": "public/brand/personagens/joana_voluntaria.svg",
+      "size": 377552,
+      "sha": "1552ace7d1005d9812de6ac4a75b1925d88d6427",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/personagens/lucia_voluntaria.svg",
+      "name": "lucia_voluntaria.svg",
+      "kind": "arquivo",
+      "category": "Personagens",
+      "path": "public/brand/personagens/lucia_voluntaria.svg",
+      "size": 339608,
+      "sha": "897950c375b2215290a3b20d76ea487044349ba8",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/personagens/marina_voluntaria.svg",
+      "name": "marina_voluntaria.svg",
+      "kind": "arquivo",
+      "category": "Personagens",
+      "path": "public/brand/personagens/marina_voluntaria.svg",
+      "size": 312929,
+      "sha": "808b817b305fddda5b7e92736a397c1d6f0a3ad3",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/personagens/rafael_voluntario.svg",
+      "name": "rafael_voluntario.svg",
+      "kind": "arquivo",
+      "category": "Personagens",
+      "path": "public/brand/personagens/rafael_voluntario.svg",
+      "size": 459127,
+      "sha": "bc196fd0741a85d55b187a7e7af37e8e9a5a7f2e",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/personagens/voluntarios_novelo.svg",
+      "name": "voluntarios_novelo.svg",
+      "kind": "arquivo",
+      "category": "Personagens",
+      "path": "public/brand/personagens/voluntarios_novelo.svg",
+      "size": 716502,
+      "sha": "14a55a95402777e0fde6d7857197d1cb05e0e144",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/pessoas-diversas-novelo.svg",
+      "name": "pessoas-diversas-novelo.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/pessoas-diversas-novelo.svg",
+      "size": 4480,
+      "sha": "3a7178fd60cc84e5f977151c229ad3e816029f4b",
+      "status": "reprovado",
+      "note": "Esse pessoas diversas é o desenho de novelo que vc fez que tem a moça dando comida na boca de uma pessoa com traqueostomia, vou enviar"
+    },
+    {
+      "id": "arquivo:public/brand/rede-de-pessoas.svg",
+      "name": "rede-de-pessoas.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/rede-de-pessoas.svg",
+      "size": 1955,
+      "sha": "bad1ee94cbda65fbf282320027d9374a797eb6eb",
+      "status": "reprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/brand/tres-geracoes-tecendo-juntas.svg",
+      "name": "tres-geracoes-tecendo-juntas.svg",
+      "kind": "arquivo",
+      "category": "SVGs",
+      "path": "public/brand/tres-geracoes-tecendo-juntas.svg",
+      "size": 13018,
+      "sha": "40ee2a5e22887bb00fead68af24950cf144c1d5a",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/favicon.ico",
+      "name": "favicon.ico",
+      "kind": "arquivo",
+      "category": "Favicon",
+      "path": "public/favicon.ico",
+      "size": 20373,
+      "sha": "3c01d69713f9c184e92b74f5799e6dff2f500825",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/fio-coracoes.png",
+      "name": "fio-coracoes.png",
+      "kind": "arquivo",
+      "category": "Imagens",
+      "path": "public/fio-coracoes.png",
+      "size": 835159,
+      "sha": "05c39eddea2ff63cd553696b4bcfc6133f15011f",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:public/fio-floral.png",
+      "name": "fio-floral.png",
+      "kind": "arquivo",
+      "category": "Imagens",
+      "path": "public/fio-floral.png",
+      "size": 764970,
+      "sha": "ab5455359f3b39e525c413a0e023393d765b6548",
+      "status": "aprovado",
+      "note": "Faça mais desses"
+    },
+    {
+      "id": "arquivo:public/logo-novelo.png",
+      "name": "logo-novelo.png",
+      "kind": "arquivo",
+      "category": "Imagens",
+      "path": "public/logo-novelo.png",
+      "size": 1137188,
+      "sha": "cd562fde4af4f3b1af5647881a87aab0e17ad5ea",
+      "status": "aprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:src/assets/demo-portraits.jpg",
+      "name": "demo-portraits.jpg",
+      "kind": "arquivo",
+      "category": "Imagens",
+      "path": "src/assets/demo-portraits.jpg",
+      "size": 162326,
+      "sha": "e2c2b694cb2c79fc8f32686a2039264835dd7d44",
+      "status": "reprovado",
+      "note": ""
+    },
+    {
+      "id": "arquivo:src/assets/hero-novelo.jpg",
+      "name": "hero-novelo.jpg",
+      "kind": "arquivo",
+      "category": "Imagens",
+      "path": "src/assets/hero-novelo.jpg",
+      "size": 228463,
+      "sha": "5ddfb670f4827bffa050dc17da3304192443462e",
+      "status": "reprovado",
+      "note": ""
+    },
+    {
+      "id": "elemento:brand.tsx:BriefcaseYarn",
+      "name": "BriefcaseYarn",
+      "kind": "elemento",
+      "category": "Elementos em código",
+      "path": "src/components/novelo/brand.tsx",
+      "status": "pendente",
+      "note": "Tente retirar a mala da logo pra ficar igual"
+    },
+    {
+      "id": "elemento:brand.tsx:Blob",
+      "name": "Blob",
+      "kind": "elemento",
+      "category": "Elementos em código",
+      "path": "src/components/novelo/brand.tsx",
+      "sources": [
+        "src/styles.css"
+      ],
+      "status": "pendente",
+      "note": "Não sei o que é isso"
+    },
+    {
+      "id": "elemento:styles.css:gradient-yarn",
+      "name": "Gradiente dos fios",
+      "kind": "elemento",
+      "category": "Elementos em código",
+      "path": "src/styles.css",
+      "sources": [
+        "src/components/novelo/brand.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:yarn-red",
+      "name": "--yarn-red",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:yarn-orange",
+      "name": "--yarn-orange",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:yarn-yellow",
+      "name": "--yarn-yellow",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:yarn-green",
+      "name": "--yarn-green",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:yarn-blue",
+      "name": "--yarn-blue",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:yarn-purple",
+      "name": "--yarn-purple",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:yarn-pink",
+      "name": "--yarn-pink",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:blob-peach",
+      "name": "--blob-peach",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:blob-butter",
+      "name": "--blob-butter",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "elemento:styles.css:blob-lavender",
+      "name": "--blob-lavender",
+      "kind": "elemento",
+      "category": "Cores dos fios",
+      "path": "src/styles.css",
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:ArrowLeft",
+      "name": "ArrowLeft",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx",
+        "src/components/ui/carousel.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:ArrowRight",
+      "name": "ArrowRight",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/OpportunityDeck.tsx",
+        "src/components/ui/carousel.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Bell",
+      "name": "Bell",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Briefcase",
+      "name": "Briefcase",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/routes/_authenticated/painel.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:BriefcaseBusiness",
+      "name": "BriefcaseBusiness",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:CalendarDays",
+      "name": "CalendarDays",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Check",
+      "name": "Check",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/ui/checkbox.tsx",
+        "src/components/ui/context-menu.tsx",
+        "src/components/ui/dropdown-menu.tsx",
+        "src/components/ui/menubar.tsx",
+        "src/components/ui/select.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:CheckCircle2",
+      "name": "CheckCircle2",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:ChevronDown",
+      "name": "ChevronDown",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/accordion.tsx",
+        "src/components/ui/navigation-menu.tsx",
+        "src/components/ui/select.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:ChevronDownIcon",
+      "name": "ChevronDownIcon",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/calendar.tsx"
+      ],
+      "status": "pendente",
+      "note": "Esse tá repetido"
+    },
+    {
+      "id": "icone:lucide-react:ChevronLeft",
+      "name": "ChevronLeft",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/pagination.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:ChevronLeftIcon",
+      "name": "ChevronLeftIcon",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/calendar.tsx"
+      ],
+      "status": "pendente",
+      "note": "Esse tb"
+    },
+    {
+      "id": "icone:lucide-react:ChevronRight",
+      "name": "ChevronRight",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/ui/breadcrumb.tsx",
+        "src/components/ui/context-menu.tsx",
+        "src/components/ui/dropdown-menu.tsx",
+        "src/components/ui/menubar.tsx",
+        "src/components/ui/pagination.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:ChevronRightIcon",
+      "name": "ChevronRightIcon",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/calendar.tsx"
+      ],
+      "status": "pendente",
+      "note": "Repetico"
+    },
+    {
+      "id": "icone:lucide-react:ChevronUp",
+      "name": "ChevronUp",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/select.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Circle",
+      "name": "Circle",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/context-menu.tsx",
+        "src/components/ui/dropdown-menu.tsx",
+        "src/components/ui/menubar.tsx",
+        "src/components/ui/radio-group.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:CircleHelp",
+      "name": "CircleHelp",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Clock",
+      "name": "Clock",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/routes/_authenticated/empresa.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Clock3",
+      "name": "Clock3",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Download",
+      "name": "Download",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/routes/_authenticated/candidata.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Edit3",
+      "name": "Edit3",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Eye",
+      "name": "Eye",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/routes/_authenticated/candidata.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:FileText",
+      "name": "FileText",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/routes/_authenticated/candidata.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:GripVertical",
+      "name": "GripVertical",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/resizable.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Heart",
+      "name": "Heart",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/routes/_authenticated/candidata.tsx",
+        "src/routes/_authenticated/empresa.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:HeartHandshake",
+      "name": "HeartHandshake",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/routes/_authenticated/painel.tsx",
+        "src/routes/index.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Home",
+      "name": "Home",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Info",
+      "name": "Info",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/OpportunityDeck.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Laptop",
+      "name": "Laptop",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Link2",
+      "name": "Link2",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:LockKeyhole",
+      "name": "LockKeyhole",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Mail",
+      "name": "Mail",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:MapPin",
+      "name": "MapPin",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/OpportunityDeck.tsx",
+        "src/routes/index.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:MessageCircle",
+      "name": "MessageCircle",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Minus",
+      "name": "Minus",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/input-otp.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:MoreHorizontal",
+      "name": "MoreHorizontal",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/breadcrumb.tsx",
+        "src/components/ui/pagination.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:MousePointerClick",
+      "name": "MousePointerClick",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:PanelLeft",
+      "name": "PanelLeft",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/sidebar.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:PauseCircle",
+      "name": "PauseCircle",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/routes/_authenticated/candidata.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Search",
+      "name": "Search",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/ui/command.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Settings",
+      "name": "Settings",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:ShieldCheck",
+      "name": "ShieldCheck",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/routes/_authenticated/empresa.tsx",
+        "src/routes/index.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:SlidersHorizontal",
+      "name": "SlidersHorizontal",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Sparkles",
+      "name": "Sparkles",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Sprout",
+      "name": "Sprout",
+      "kind": "icone",
+      "category": "Ícones Lucide",      "path": "lucide-react",
+      "sources": [
+        "src/routes/index.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Star",
+      "name": "Star",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Sun",
+      "name": "Sun",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/routes/index.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Trash2",
+      "name": "Trash2",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/routes/_authenticated/candidata.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:UserRound",
+      "name": "UserRound",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:Users",
+      "name": "Users",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/routes/index.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:UsersRound",
+      "name": "UsersRound",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    },
+    {
+      "id": "icone:lucide-react:X",
+      "name": "X",
+      "kind": "icone",
+      "category": "Ícones Lucide",
+      "path": "lucide-react",
+      "sources": [
+        "src/components/novelo/CandidateUxDemo.tsx",
+        "src/components/novelo/OpportunityDeck.tsx",
+        "src/components/ui/dialog.tsx",
+        "src/components/ui/sheet.tsx"
+      ],
+      "status": "pendente",
+      "note": ""
+    }
+  ]
+}
