@@ -134,3 +134,12 @@
  .trio-image{display:none}
  .art-yarn{opacity:.07!important;left:-30%;bottom:-29%;height:46%;width:68%}
 }
+
+/* Mais área útil no celular e assinatura visual com leitura nítida. */
+@media(max-width:760px){
+ .frame{width:min(calc(100vw - 14px),calc((100dvh - 146px)*9/16));aspect-ratio:9/16}
+ .final-figure{opacity:.18}
+}
+@media(max-width:400px){
+ .frame{width:min(calc(100vw - 12px),calc((100dvh - 136px)*9/16))}
+}
