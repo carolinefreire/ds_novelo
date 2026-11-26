@@ -34,13 +34,13 @@ Este repositório não deve modificar o aplicativo nem o repositório principal 
 
 ## Curadoria visual
 
-- A galeria de `curadoria.html` exibe os arquivos visuais que **já são públicos** no repositório do aplicativo.
+- A galeria de `curadoria.html` identifica os 27 arquivos gráficos do repositório **privado** do aplicativo. Apenas os arquivos aprovados já copiados para este DS público têm prévia. Originais pendentes devem ser vistos no GitHub com conta autorizada.
 - **Aprovar / Desaprovar / Ajustar** abrem uma Issue preenchida; a decisão é confirmada quando a administradora envia a Issue no GitHub.
 - A automação só atua em solicitações criadas pela conta `carolinefreire`. A execução é registrada no GitHub Actions.
 - **Aprovar:** cria cópia organizada em `novelo/public/brand/curadoria/aprovados/` e publica a arte no acervo do DS, preservando a origem.
 - **Desaprovar:** exclui apenas o arquivo apontado no repositório principal após barrar recursos essenciais e referências em uso; preserva o histórico Git.
 - **Ajustar:** registra o comentário em Issue; a nova ilustração precisa ser criada e aprovada em conversa com o assistente.
-- O nome do segredo no repositório **ds_novelo** deve ser `NOVELO_GITHUB_TOKEN`. O fine-grained PAT deve ter **Contents: Read and write** no repositório `carolinefreire/novelo`. Nunca coloque o token em HTML ou Issues.
+- O segredo no repositório **ds_novelo** deve se chamar `NOVELO_GITHUB_TOKEN`. Use um fine-grained PAT autorizado para o repositório **privado** `carolinefreire/novelo`, com **Contents: Read and write**. Nunca coloque o token no HTML nem nas Issues. Depois de configurar, execute **Actions → Sincronizar somente recursos oficiais aprovados → Run workflow** para copiar exclusivamente `logo-novelo.png` e `fio-coracoes.png` sem modificá-los.
 
 ### Limitação de privacidade
 
@@ -48,4 +48,4 @@ Este repositório não deve modificar o aplicativo nem o repositório principal 
 
 ### Acervo pendente de migração
 
-O catálogo inicial inclui os 27 arquivos gráficos já públicos no repositório principal. Os mockups locais históricos e o arquivo binário final aprovado na Issue #10 **não foram enviados automaticamente**; os mockups de telefone na apresentação são exemplos conceituais, claramente identificados. Não publicar imagens pendentes sem aprovação.
+O inventário inicial contém os metadados dos 27 arquivos gráficos do repositório principal, que é **privado**. As imagens pendentes não são copiadas para o Pages público. Os mockups locais históricos e o arquivo binário final aprovado na Issue #10 **não foram enviados automaticamente**; os mockups de telefone na apresentação são exemplos conceituais, claramente identificados. Não publicar imagens pendentes sem aprovação.
