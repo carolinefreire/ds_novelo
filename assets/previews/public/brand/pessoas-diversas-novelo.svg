@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 315" role="img" aria-labelledby="t d"><title id="t">Pessoas diversas conectadas pela Novelo</title><desc id="d">Quatro profissionais com aparências, idades e estilos diversos, sorridentes e unidos por fios coloridos.</desc>
+<defs>
+ <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f62463"/><stop offset=".2" stop-color="#fb7d24"/><stop offset=".42" stop-color="#f9c02a"/><stop offset=".6" stop-color="#219c78"/><stop offset=".77" stop-color="#1579d2"/><stop offset="1" stop-color="#ab2ac9"/></linearGradient>
+ <linearGradient id="purple" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#a848a2"/><stop offset="1" stop-color="#5f236b"/></linearGradient>
+ <linearGradient id="orange" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffb143"/><stop offset="1" stop-color="#eb6734"/></linearGradient>
+ <filter id="shadow" x="-.2" y="-.2" width="1.5" height="1.5"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#6d2f60" flood-opacity=".15"/></filter>
+</defs>
+<ellipse cx="331" cy="297" rx="294" ry="11" fill="#76286b" opacity=".09"/>
+<!-- fourth person: lilac head covering and purple top -->
+<g transform="translate(422 64)" filter="url(#shadow)">
+ <path d="M18 175q11-70 91-71 78 2 93 71l7 47H7Z" fill="url(#purple)"/>
+ <path d="M55 79q-15-89 54-87 67 0 65 85l-20 49H74Z" fill="#682a82"/>
+ <ellipse cx="108" cy="79" rx="52" ry="64" fill="#ad623f"/>
+ <path d="M54 75q5-78 67-75 50 3 53 73-37-30-75-35-25 32-45 37Z" fill="#88379c"/>
+ <path d="M66 90q10 8 19-1m49-1q9 8 18 1" fill="none" stroke="#422b37" stroke-width="4" stroke-linecap="round"/>
+ <path d="M95 114q16 14 31-1" fill="none" stroke="#672f40" stroke-width="4" stroke-linecap="round"/>
+ <circle cx="55" cy="113" r="10" fill="none" stroke="#ffc044" stroke-width="5"/>
+</g>
+<!-- third person: older with silver curls and glasses -->
+<g transform="translate(265 42)" filter="url(#shadow)">
+ <path d="M10 210q5-75 96-76 87 0 103 76v36H10Z" fill="#ff9f43" />
+ <g fill="#b4a4b2"><circle cx="48" cy="72" r="23"/><circle cx="67" cy="42" r="27"/><circle cx="100" cy="32" r="29"/><circle cx="138" cy="34" r="27"/><circle cx="166" cy="61" r="27"/><circle cx="174" cy="91" r="25"/></g>
+ <ellipse cx="108" cy="97" rx="58" ry="69" fill="#f6c18d"/>
+ <path d="M55 71q17-52 65-45 44 2 51 44-32-17-56-24-40 24-60 25Z" fill="#d6c6d3"/>
+ <g fill="none" stroke="#6c4762" stroke-width="4"><circle cx="81" cy="93" r="19"/><circle cx="137" cy="93" r="19"/><path d="M100 88h18"/></g>
+ <path d="M96 122q13 12 27-1" fill="none" stroke="#ac5f5c" stroke-width="4" stroke-linecap="round"/>
+ <circle cx="52" cy="135" r="8" fill="#f6bc3b"/>
+</g>
+<!-- second person: redhead and teal shirt -->
+<g transform="translate(127 74)" filter="url(#shadow)">
+ <path d="M15 168q15-72 93-73 81 0 99 73l7 44H7Z" fill="#218a84"/>
+ <path d="M48 111q-24-84 40-105 76-23 93 61l-15 79H64Z" fill="#b64931"/>
+ <ellipse cx="111" cy="93" rx="53" ry="64" fill="#e7a67a"/>
+ <path d="M58 80q-8-67 55-71 63 6 61 72-34-25-55-51-21 37-61 50Z" fill="#d45d3b"/>
+ <path d="M79 99q9 9 20 0m32-1q9 9 20 0" fill="none" stroke="#493036" stroke-width="4" stroke-linecap="round"/>
+ <path d="M100 121q18 17 32-1" fill="none" stroke="#a8524e" stroke-width="4" stroke-linecap="round"/>
+ <circle cx="59" cy="118" r="9" fill="none" stroke="#ffe36a" stroke-width="5"/>
+</g>
+<!-- first person: Black woman with natural hair and warm blouse -->
+<g transform="translate(0 54)" filter="url(#shadow)">
+ <path d="M9 191q3-81 93-82 89 2 104 82l7 61H5Z" fill="url(#orange)"/>
+ <g fill="#38232e"><circle cx="47" cy="77" r="30"/><circle cx="68" cy="49" r="29"/><circle cx="104" cy="41" r="31"/><circle cx="142" cy="50" r="30"/><circle cx="162" cy="80" r="31"/><circle cx="155" cy="112" r="28"/></g>
+ <ellipse cx="103" cy="107" rx="55" ry="66" fill="#a45935"/>
+ <path d="M65 106q10 10 20-1m33-1q11 10 20 0" fill="none" stroke="#382530" stroke-width="4.5" stroke-linecap="round"/>
+ <path d="M87 134q18 19 34 0" fill="none" stroke="#613040" stroke-width="4.5" stroke-linecap="round"/>
+ <circle cx="52" cy="140" r="13" fill="none" stroke="#f7bc41" stroke-width="6"/>
+</g>
+<!-- colorful yarn unifies figures -->
+<path d="M-22 292C112 256 212 312 322 291 418 273 524 314 682 270" stroke="url(#rainbow)" stroke-width="23" stroke-linecap="round" fill="none"/>
+<path d="M-22 292C112 256 212 312 322 291 418 273 524 314 682 270" stroke="#fff6e6" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>
