@@ -18,7 +18,9 @@ function openDialog(item,button){
   selected=item;selectedButton=button;
   $("dialog-title").textContent=item.name;
   $("dialog-category").textContent=item.category+" · "+readable(item);
-  $("dialog-preview").src=item.image;$("dialog-preview").alt=item.name;
+  const preview=$("dialog-preview"),locked=$("private-preview");
+  if(item.image){preview.src=item.image;preview.alt=item.name;preview.style.display="block";locked.hidden=true;}
+  else{preview.removeAttribute("src");preview.style.display="none";locked.hidden=false;$("private-view").href="https://github.com/carolinefreire/novelo/blob/main/"+item.path.split("/").map(encodeURIComponent).join("/");}
   $("dialog-note").value=noteFor(item);
   $("dialog-help").textContent="O GitHub solicitará seu login e a confirmação antes de registrar esta decisão.";
   $("action-dialog").showModal();
@@ -38,7 +40,7 @@ function issueUrl(item,action,note){
     "### "+actionName+" · Design System Novelo",
     "**Arquivo original:** \`"+item.path+"\`",
     "**Situação no catálogo:** "+readable(item),
-    "**Visualização:** "+item.image,
+    "**Visualização:** "+(item.image || "https://github.com/carolinefreire/novelo/blob/main/"+item.path),
     "",
     "### Comentário",
     note.trim()||"Sem observações adicionais.",
@@ -82,8 +84,9 @@ function render(){
   for(const item of visible){
     const card=E("article","review-card");
     const imageButton=E("button","review-thumb");imageButton.type="button";imageButton.setAttribute("aria-label","Ampliar "+item.name);
-    const image=E("img");image.src=item.image;image.alt=item.name;image.loading="lazy";
-    imageButton.append(image);imageButton.addEventListener("click",()=>openDialog(item,imageButton));
+    if(item.image){const image=E("img");image.src=item.image;image.alt=item.name;image.loading="lazy";imageButton.append(image);}
+    else{imageButton.append(E("div","review-locked","🔒 Original no repositório privado"));}
+    imageButton.addEventListener("click",()=>openDialog(item,imageButton));
     const data=E("div","review-details");
     data.append(E("span","review-label",item.category),E("h2","",item.name),E("p","",item.path));
     const chip=E("span","review-status "+(isApproved(item)?"is-approved":item.status==="reprovado_historico"?"is-rejected":""),readable(item));data.append(chip);
