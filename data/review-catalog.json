@@ -2,7 +2,7 @@
   "schema": "novelo-ds-review/v1",
   "repository": "carolinefreire/novelo",
   "treeSha": "4d548f75124b1facbc88a6d627d556e707aba193",
-  "notice": "Imagens referidas mas não aprovadas permanecem pendentes. Não usar no site público sem aprovação.",
+  "notice": "Galeria pública: arquivos identificados como pendentes/reprovados são prévias para avaliação, sem aprovação. Abrir Issue não modifica nenhum arquivo.",
   "items": [
     {
       "path": "public/brand/avatar-candidata.svg",
@@ -11,9 +11,10 @@
       "size": 1284,
       "sha": "abddd088b1080bf1afbf19e1e70a983aec2e293d",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/avatar-candidata.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/broto-de-vida.svg",
@@ -22,9 +23,10 @@
       "size": 686,
       "sha": "7d97e9df5a3f6ed977f046db1ba6fa7663e4cffb",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/broto-de-vida.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/coracao-de-fio.svg",
@@ -33,9 +35,10 @@
       "size": 4096,
       "sha": "50203ba629476b481fc465efa5895d17e257ab86",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/coracao-de-fio.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/coracao-fios-laterais.svg",
@@ -44,9 +47,10 @@
       "size": 4097,
       "sha": "e0753585dc0071b5a2fc4318394d45fcc5dc4580",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/coracao-fios-laterais.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/elo-mutuo.svg",
@@ -55,9 +59,10 @@
       "size": 2223,
       "sha": "aa1b4b169af3fc088c9108486d989e029832fb79",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/elo-mutuo.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/fio-entrelaçado-base.svg",
@@ -66,9 +71,10 @@
       "size": 2271,
       "sha": "97fd39f423aa45b843453ef5b22441c2c67d317b",
       "status": "reprovado_historico",
-      "image": null,
+      "image": "assets/previews/public/brand/fio-entrelaçado-base.svg",
       "notes": "Fio vetorial liso rejeitado para a tela inicial; não excluir automaticamente.",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/fio-entrelaçado-topo.svg",
@@ -77,9 +83,10 @@
       "size": 2388,
       "sha": "e6fdafd69f8a38ed7a93eef5e098b55d09e28c34",
       "status": "reprovado_historico",
-      "image": null,
+      "image": "assets/previews/public/brand/fio-entrelaçado-topo.svg",
       "notes": "Fio vetorial liso rejeitado para a tela inicial; não excluir automaticamente.",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/formas-organicas.svg",
@@ -88,9 +95,10 @@
       "size": 579,
       "sha": "136f44a50516b1fc3bcae04e458810d495841727",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/formas-organicas.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/maleta-novelo.svg",
@@ -99,9 +107,10 @@
       "size": 1987,
       "sha": "88d48fd1e9890f5a99c410904b892aa1fdbd4f70",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/maleta-novelo.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/personagem-profissional-cadeira-rodas.svg",
@@ -110,9 +119,10 @@
       "size": 5318,
       "sha": "c4bcd630ee1603bb93b34f209f28f9eda09c0fcc",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/personagem-profissional-cadeira-rodas.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/personagem-profissional-prancheta.svg",
@@ -121,9 +131,10 @@
       "size": 4239,
       "sha": "36fd2f7375992e7a997a30bd55eeb495f264239b",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/personagem-profissional-prancheta.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/personagens/beatriz_voluntaria.svg",
@@ -132,9 +143,10 @@
       "size": 282501,
       "sha": "2c8865875a9295bd78a498de9432286e4ccfcd04",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/personagens/beatriz_voluntaria.svg",
       "notes": "Aprovação individual não confirmada no histórico recuperado.",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/personagens/diego_voluntario.svg",
@@ -198,9 +210,10 @@
       "size": 716502,
       "sha": "14a55a95402777e0fde6d7857197d1cb05e0e144",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/personagens/voluntarios_novelo.svg",
       "notes": "Aprovações individuais não implicam aprovação do grupo.",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/pessoas-diversas-novelo.svg",
@@ -209,9 +222,10 @@
       "size": 4480,
       "sha": "3a7178fd60cc84e5f977151c229ad3e816029f4b",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/pessoas-diversas-novelo.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/rede-de-pessoas.svg",
@@ -220,9 +234,10 @@
       "size": 1955,
       "sha": "bad1ee94cbda65fbf282320027d9374a797eb6eb",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/brand/rede-de-pessoas.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/brand/tres-geracoes-tecendo-juntas.svg",
@@ -242,9 +257,10 @@
       "size": 20373,
       "sha": "3c01d69713f9c184e92b74f5799e6dff2f500825",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/favicon.ico.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/fio-coracoes.png",
@@ -253,9 +269,10 @@
       "size": 835159,
       "sha": "05c39eddea2ff63cd553696b4bcfc6133f15011f",
       "status": "aprovado",
-      "image": null,
+      "image": "assets/previews/public/fio-coracoes.png.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/fio-floral.png",
@@ -264,9 +281,10 @@
       "size": 764970,
       "sha": "ab5455359f3b39e525c413a0e023393d765b6548",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/public/fio-floral.png.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "public/logo-novelo.png",
@@ -276,7 +294,7 @@
       "sha": "cd562fde4af4f3b1af5647881a87aab0e17ad5ea",
       "status": "aprovado",
       "image": null,
-      "notes": "",
+      "notes": "A imagem original da marca ainda precisa de sincronização binária; não substituir por aproximações.",
       "private_source": true
     },
     {
@@ -286,9 +304,10 @@
       "size": 162326,
       "sha": "e2c2b694cb2c79fc8f32686a2039264835dd7d44",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/src/assets/demo-portraits.jpg.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     },
     {
       "path": "src/assets/hero-novelo.jpg",
@@ -297,9 +316,11 @@
       "size": 228463,
       "sha": "5ddfb670f4827bffa050dc17da3304192443462e",
       "status": "pendente",
-      "image": null,
+      "image": "assets/previews/src/assets/hero-novelo.jpg.svg",
       "notes": "",
-      "private_source": true
+      "private_source": true,
+      "preview_public": true
     }
-  ]
+  ],
+  "updatedAt": "2026-11-26"
 }
