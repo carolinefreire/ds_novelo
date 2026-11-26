@@ -3,7 +3,8 @@
 const $ = id => document.getElementById(id);
 const repo = "carolinefreire/ds_novelo";
 const source = "carolinefreire/novelo";
-let items = [], selected = null, focusOrigin = null, originalDocument = null;
+let items = [], historyItems = [], selected = null, focusOrigin = null, originalDocument = null;
+let historyLoaded=false, historyLoading=null, historyError="";
 const storageKey = "novelo-ds-curadoria-notas/v3";
 let notes = {};
 try {
@@ -33,10 +34,14 @@ const swatches = Object.freeze({
 const yarn = ["--yarn-red","--yarn-orange","--yarn-yellow","--yarn-green","--yarn-blue","--yarn-purple","--yarn-pink"];
 const rainbow = "linear-gradient(90deg," + yarn.map(k => swatches[k]).join(",") + ")";
 const statusLabel = {aprovado:"Aprovado",reprovado:"Reprovado",pendente:"Pendente"};
+const itemStatus = item => item.kind==="historico" ?
+  (item.status==="aprovado" ? "Aprovada (Issue #10)" : "Não avaliada no JSON original")
+  : (statusLabel[item.status]||item.status);
 const filePath = item => (typeof item.path === "string" ? item.path : "");
 const encodePath = path => path.split("/").map(encodeURIComponent).join("/");
 const privateUrl = item => "https://github.com/" + source + "/blob/main/" + encodePath(filePath(item));
 const previewPath = item => {
+  if (item.kind === "historico") return item.preview || null;
   if (item.kind !== "arquivo") return null;
   const path = filePath(item);
   if (path === "public/logo-novelo.png") return "assets/brand/logo-novelo.png";
@@ -55,9 +60,9 @@ function iconName(item) {
 }
 function createPreview(item, expanded = false) {
   const frame = E("div","asset-frame" + (expanded ? " is-expanded" : ""));
-  if(item.kind === "arquivo") {
+  if(item.kind === "arquivo" || item.kind === "historico") {
     const img = E("img","asset-image");
-    img.alt = "Prévia do arquivo " + item.name + ", " + (statusLabel[item.status] || item.status);
+    img.alt = "Prévia do arquivo " + item.name + ", " + itemStatus(item);
     img.loading = expanded ? "eager" : "lazy";
     const unavailable = E("span","asset-unavailable","Prévia não disponível para este arquivo");
     unavailable.hidden = true;
@@ -118,7 +123,7 @@ function closeDialog(){
 function openDialog(item,origin){
   selected=item;focusOrigin=origin;
   $("dialog-title").textContent=item.name;
-  $("dialog-category").textContent=item.category+" · "+statusLabel[item.status];
+  $("dialog-category").textContent=item.category+" · "+itemStatus(item)+(item.originalSize?" · "+item.originalSize:"");
   const render=$("dialog-render");
   render.replaceChildren(createPreview(item,true));
   $("dialog-preview").hidden=true;
@@ -132,14 +137,15 @@ function issueUrl(item,note){
   const body=[
     "## Solicitação de revisão · Design System Novelo",
     "",
-    "**ID do JSON original:** \`"+item.id+"\`",
+    "**ID do registro:** \`"+item.id+"\`",
     "**Nome:** "+item.name,
     "**Tipo:** "+item.kind+" / "+item.category,
-    "**Estado registrado em 24/11/2026:** "+(statusLabel[item.status]||item.status),
-    "**Arquivo de origem:** "+(item.kind==="icone"?"Biblioteca Lucide: "+item.name:filePath(item)),
+    "**Estado da curadoria:** "+itemStatus(item),
+    "**Arquivo de origem:** "+(item.kind==="icone"?"Biblioteca Lucide: "+item.name:item.kind==="historico"?"Arquivo histórico da conversa: "+item.name:filePath(item)),
+    ...(item.sourceSha256?["**SHA-256 do original:** "+item.sourceSha256,"**Tamanho original:** "+item.originalSize]:[]),
     "**Prévia no Design System:** https://carolinefreire.github.io/ds_novelo/curadoria.html",
     "",
-    "### Observação anterior (JSON original)",
+    item.kind==="historico"?"### Observação histórica":"### Observação anterior (JSON original)",
     item.note?.trim()||"Sem comentário anterior.",
     "",
     "### Ajuste solicitado agora",
@@ -164,14 +170,23 @@ function render(){
   const term=$("search").value.trim().toLocaleLowerCase("pt-BR");
   const status=$("filter").value;
   const kind=$("kind-filter").value;
-  const visible=items.filter(item=>
+  const collection=$("collection-filter").value;
+  const pool=collection==="historico"?historyItems:collection==="todos"?[...items,...historyItems]:items;
+  const visible=pool.filter(item=>
     (status==="todos"||item.status===status) &&
     (kind==="todos"||item.kind===kind) &&
     [item.name,item.category,item.path,item.id,item.note,...(item.sources||[])].join(" ").toLocaleLowerCase("pt-BR").includes(term)
   );
-  $("status").textContent=visible.length+" de "+items.length+" registros do JSON original · 27 arquivos gráficos + 52 ícones + 13 elementos · somente Issues";
+  const subtitle=collection==="json"?"JSON original: 92 registros · 27 arquivos + 52 ícones + 13 elementos":
+    collection==="historico"?"Histórico: "+historyItems.length+" de 95 imagens da conversa":
+    "Acervo completo: 92 registros do JSON + "+historyItems.length+" de 95 imagens históricas";
+  $("status").textContent=visible.length+" itens exibidos · "+subtitle+(historyLoading?" · carregando prévias…":"")+
+    (historyError?" · "+historyError:"")+" · Issues não alteram arquivos";
   const grid=$("admin-gallery");grid.replaceChildren();
-  if(!visible.length){grid.append(E("p","","Nenhum item encontrado."));return;}
+  if(!visible.length){
+    grid.append(E("p","",historyLoading?"Carregando imagens…":"Nenhum item encontrado."));
+    return;
+  }
   for(const item of visible){
     const card=E("article","review-card");
     const thumb=E("button","review-thumb");thumb.type="button";
@@ -179,25 +194,60 @@ function render(){
     thumb.append(createPreview(item));
     thumb.addEventListener("click",()=>openDialog(item,thumb));
     const data=E("div","review-details");
-    data.append(E("span","review-label",item.category),E("h2","",item.name));
-    data.append(E("p","review-path",item.kind==="icone"?"lucide-react":filePath(item)));
-    const chip=E("span","review-status "+(item.status==="aprovado"?"is-approved":item.status==="reprovado"?"is-rejected":""),statusLabel[item.status]||item.status);
+    data.append(E("span","review-label",item.kind==="historico"?"Histórico · "+item.category:item.category),E("h2","",item.name));
+    data.append(E("p","review-path",item.kind==="historico"?(item.originalSize+" · prévia reduzida"):item.kind==="icone"?"lucide-react":filePath(item)));
+    const chip=E("span","review-status "+(item.status==="aprovado"?"is-approved":item.status==="reprovado"?"is-rejected":""),itemStatus(item));
     data.append(chip);
-    if(item.note)data.append(E("p","review-comment","Comentário original: "+item.note));
+    if(item.note)data.append(E("p","review-comment","Comentário: "+item.note));
     const act=E("button","review-open","Ampliar · abrir Issue");
-    act.type="button";
-    act.addEventListener("click",()=>openDialog(item,act));
-    data.append(act);
-    card.append(thumb,data);grid.append(card);
+    act.type="button";act.addEventListener("click",()=>openDialog(item,act));
+    data.append(act);card.append(thumb,data);grid.append(card);
   }
+}
+async function ensureHistory(){
+  if(historyLoaded||historyLoading)return historyLoading;
+  historyError="";
+  historyLoading=(async()=>{
+    const manifestResponse=await fetch("data/historico-manifest.json",{cache:"no-store"});
+    if(!manifestResponse.ok)throw Error("manifesto histórico HTTP "+manifestResponse.status);
+    const manifest=await manifestResponse.json();
+    if(manifest.schema!=="novelo-historico-manifest/v1"||manifest.total!==95||!Array.isArray(manifest.batchFiles))
+      throw Error("Manifesto histórico inválido");
+    const chunks=await Promise.all(manifest.batchFiles.map(async file=>{
+      const res=await fetch(file,{cache:"force-cache"});
+      if(!res.ok)throw Error(file+" HTTP "+res.status);
+      const doc=await res.json();
+      if(doc.schema!=="novelo-historico-preview/v1"||!Array.isArray(doc.items))throw Error(file+" inválido");
+      return doc.items;
+    }));
+    const combined=chunks.flat();
+    if(combined.length!==95||new Set(combined.map(i=>i.id)).size!==95)
+      throw Error("O histórico não contém os 95 arquivos esperados");
+    historyItems=combined;
+    historyLoaded=true;
+  })().catch(error=>{historyError=error.message;}).finally(()=>{historyLoading=null;render();});
+  render();
+  return historyLoading;
+}
+function collectionChanged(){
+  const c=$("collection-filter").value;
+  if(c!=="json")ensureHistory();
+  render();
 }
 $("search").addEventListener("input",render);
 $("filter").addEventListener("change",render);
-$("kind-filter").addEventListener("change",render);
+$("kind-filter").addEventListener("change",()=>{
+  const kind=$("kind-filter").value;
+  if(kind==="historico")$("collection-filter").value="historico";
+  else if(kind!=="todos"&&$("collection-filter").value==="historico")$("collection-filter").value="json";
+  collectionChanged();
+});
+$("collection-filter").addEventListener("change",collectionChanged);
 $("export").addEventListener("click",()=>{
   const data={...originalDocument,exportedWithNotesAt:new Date().toISOString(),
     exportNote:"O original de 24/11/2026 foi preservado. Notas adicionais ficam em reviewNotes; criar Issues não muda o repositório.",
-    reviewNotes:notes};
+    reviewNotes:notes,
+    historyInventory:historyItems.map(({preview,...item})=>item)};
   const href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"}));
   const anchor=E("a");anchor.href=href;anchor.download="novelo-ds-curadoria-revisao.json";
   document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(href),2000);
