@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" fill="none" role="img" aria-labelledby="t"><title id="t">Fio trançado multicolorido com laço</title><defs>
+<linearGradient id="fio" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+ <stop offset="0" stop-color="#EE2737"/><stop offset=".15" stop-color="#FF6423"/><stop offset=".29" stop-color="#F7BC25"/><stop offset=".45" stop-color="#139B69"/><stop offset=".61" stop-color="#1685C2"/><stop offset=".75" stop-color="#2846BC"/><stop offset=".88" stop-color="#9B28AF"/><stop offset="1" stop-color="#F51B70"/>
+</linearGradient>
+<linearGradient id="fioBlue" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#FF4D28"/><stop offset=".28" stop-color="#EE245F"/><stop offset=".57" stop-color="#5D29B0"/><stop offset=".79" stop-color="#1769CA"/><stop offset="1" stop-color="#139B72"/></linearGradient>
+<linearGradient id="fioSun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F52968"/><stop offset=".26" stop-color="#FF9E19"/><stop offset=".48" stop-color="#F6CD28"/><stop offset=".67" stop-color="#159765"/><stop offset=".85" stop-color="#115CC0"/><stop offset="1" stop-color="#9D20A7"/></linearGradient>
+<filter id="shadow" x="-30%" y="-40%" width="165%" height="190%"><feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b"/><feOffset in="b" dx="1" dy="4" result="o"/><feComponentTransfer in="o" result="s"><feFuncA type="linear" slope=".20"/></feComponentTransfer><feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<path d="M-45 182C145 45 259 63 367 137 463 203 521 204 542 150 570 75 485 52 456 114 435 160 469 211 540 174 677 99 703 56 830 103 910 132 968 138 1046 78" stroke="url(#fioBlue)" stroke-width="32" stroke-linecap="round" filter="url(#shadow)"/>
+<path d="M-32 210C145 102 253 90 350 110 426 124 483 173 549 154 660 120 707 65 829 64 916 62 977 93 1050 133" stroke="url(#fioSun)" stroke-width="27" stroke-linecap="round" filter="url(#shadow)"/>
+<path d="M-30 203C145 95 250 83 350 104 426 120 480 166 549 148 663 111 708 58 829 58" stroke="#FFEDBB" stroke-opacity=".22" stroke-width="3" stroke-linecap="round"/>
+<path d="M456 114C430 161 475 208 540 174" stroke="#4B185C" stroke-opacity=".11" stroke-width="5" stroke-linecap="round"/>
+</svg>
