@@ -11,8 +11,9 @@
       "size": 1284,
       "sha": "abddd088b1080bf1afbf19e1e70a983aec2e293d",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/avatar-candidata.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/broto-de-vida.svg",
@@ -21,8 +22,9 @@
       "size": 686,
       "sha": "7d97e9df5a3f6ed977f046db1ba6fa7663e4cffb",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/broto-de-vida.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/coracao-de-fio.svg",
@@ -31,8 +33,9 @@
       "size": 4096,
       "sha": "50203ba629476b481fc465efa5895d17e257ab86",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/coracao-de-fio.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/coracao-fios-laterais.svg",
@@ -41,8 +44,9 @@
       "size": 4097,
       "sha": "e0753585dc0071b5a2fc4318394d45fcc5dc4580",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/coracao-fios-laterais.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/elo-mutuo.svg",
@@ -51,8 +55,9 @@
       "size": 2223,
       "sha": "aa1b4b169af3fc088c9108486d989e029832fb79",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/elo-mutuo.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/fio-entrelaçado-base.svg",
@@ -61,8 +66,9 @@
       "size": 2271,
       "sha": "97fd39f423aa45b843453ef5b22441c2c67d317b",
       "status": "reprovado_historico",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/fio-entrelaçado-base.svg",
-      "notes": "Fio vetorial liso rejeitado para a tela inicial; não excluir automaticamente."
+      "image": null,
+      "notes": "Fio vetorial liso rejeitado para a tela inicial; não excluir automaticamente.",
+      "private_source": true
     },
     {
       "path": "public/brand/fio-entrelaçado-topo.svg",
@@ -71,8 +77,9 @@
       "size": 2388,
       "sha": "e6fdafd69f8a38ed7a93eef5e098b55d09e28c34",
       "status": "reprovado_historico",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/fio-entrelaçado-topo.svg",
-      "notes": "Fio vetorial liso rejeitado para a tela inicial; não excluir automaticamente."
+      "image": null,
+      "notes": "Fio vetorial liso rejeitado para a tela inicial; não excluir automaticamente.",
+      "private_source": true
     },
     {
       "path": "public/brand/formas-organicas.svg",
@@ -81,8 +88,9 @@
       "size": 579,
       "sha": "136f44a50516b1fc3bcae04e458810d495841727",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/formas-organicas.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/maleta-novelo.svg",
@@ -91,8 +99,9 @@
       "size": 1987,
       "sha": "88d48fd1e9890f5a99c410904b892aa1fdbd4f70",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/maleta-novelo.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/personagem-profissional-cadeira-rodas.svg",
@@ -101,8 +110,9 @@
       "size": 5318,
       "sha": "c4bcd630ee1603bb93b34f209f28f9eda09c0fcc",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagem-profissional-cadeira-rodas.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/personagem-profissional-prancheta.svg",
@@ -111,8 +121,9 @@
       "size": 4239,
       "sha": "36fd2f7375992e7a997a30bd55eeb495f264239b",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagem-profissional-prancheta.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/personagens/beatriz_voluntaria.svg",
@@ -121,8 +132,9 @@
       "size": 282501,
       "sha": "2c8865875a9295bd78a498de9432286e4ccfcd04",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagens/beatriz_voluntaria.svg",
-      "notes": "Aprovação individual não confirmada no histórico recuperado."
+      "image": null,
+      "notes": "Aprovação individual não confirmada no histórico recuperado.",
+      "private_source": true
     },
     {
       "path": "public/brand/personagens/diego_voluntario.svg",
@@ -131,8 +143,9 @@
       "size": 197556,
       "sha": "8e6288c88d3cfd024ad9aa5c97eef27ce74462ea",
       "status": "aprovado",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagens/diego_voluntario.svg",
-      "notes": ""
+      "image": "assets/diego_voluntario.svg",
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/personagens/joana_voluntaria.svg",
@@ -141,8 +154,9 @@
       "size": 377552,
       "sha": "1552ace7d1005d9812de6ac4a75b1925d88d6427",
       "status": "aprovado",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagens/joana_voluntaria.svg",
-      "notes": ""
+      "image": "assets/joana_voluntaria.svg",
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/personagens/lucia_voluntaria.svg",
@@ -151,8 +165,9 @@
       "size": 339608,
       "sha": "897950c375b2215290a3b20d76ea487044349ba8",
       "status": "aprovado",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagens/lucia_voluntaria.svg",
-      "notes": ""
+      "image": "assets/lucia_voluntaria.svg",
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/personagens/marina_voluntaria.svg",
@@ -161,8 +176,9 @@
       "size": 312929,
       "sha": "808b817b305fddda5b7e92736a397c1d6f0a3ad3",
       "status": "aprovado",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagens/marina_voluntaria.svg",
-      "notes": ""
+      "image": "assets/marina_voluntaria.svg",
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/personagens/rafael_voluntario.svg",
@@ -171,8 +187,9 @@
       "size": 459127,
       "sha": "bc196fd0741a85d55b187a7e7af37e8e9a5a7f2e",
       "status": "aprovado",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagens/rafael_voluntario.svg",
-      "notes": ""
+      "image": "assets/rafael_voluntario.svg",
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/personagens/voluntarios_novelo.svg",
@@ -181,8 +198,9 @@
       "size": 716502,
       "sha": "14a55a95402777e0fde6d7857197d1cb05e0e144",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/personagens/voluntarios_novelo.svg",
-      "notes": "Aprovações individuais não implicam aprovação do grupo."
+      "image": null,
+      "notes": "Aprovações individuais não implicam aprovação do grupo.",
+      "private_source": true
     },
     {
       "path": "public/brand/pessoas-diversas-novelo.svg",
@@ -191,8 +209,9 @@
       "size": 4480,
       "sha": "3a7178fd60cc84e5f977151c229ad3e816029f4b",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/pessoas-diversas-novelo.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/rede-de-pessoas.svg",
@@ -201,8 +220,9 @@
       "size": 1955,
       "sha": "bad1ee94cbda65fbf282320027d9374a797eb6eb",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/rede-de-pessoas.svg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/brand/tres-geracoes-tecendo-juntas.svg",
@@ -211,8 +231,9 @@
       "size": 13018,
       "sha": "40ee2a5e22887bb00fead68af24950cf144c1d5a",
       "status": "aprovado",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/brand/tres-geracoes-tecendo-juntas.svg",
-      "notes": ""
+      "image": "assets/tres-geracoes-tecendo-juntas.svg",
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/favicon.ico",
@@ -221,8 +242,9 @@
       "size": 20373,
       "sha": "3c01d69713f9c184e92b74f5799e6dff2f500825",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/favicon.ico",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/fio-coracoes.png",
@@ -231,8 +253,9 @@
       "size": 835159,
       "sha": "05c39eddea2ff63cd553696b4bcfc6133f15011f",
       "status": "aprovado",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/fio-coracoes.png",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/fio-floral.png",
@@ -241,8 +264,9 @@
       "size": 764970,
       "sha": "ab5455359f3b39e525c413a0e023393d765b6548",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/fio-floral.png",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "public/logo-novelo.png",
@@ -251,8 +275,9 @@
       "size": 1137188,
       "sha": "cd562fde4af4f3b1af5647881a87aab0e17ad5ea",
       "status": "aprovado",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/public/logo-novelo.png",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "src/assets/demo-portraits.jpg",
@@ -261,8 +286,9 @@
       "size": 162326,
       "sha": "e2c2b694cb2c79fc8f32686a2039264835dd7d44",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/src/assets/demo-portraits.jpg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     },
     {
       "path": "src/assets/hero-novelo.jpg",
@@ -271,8 +297,9 @@
       "size": 228463,
       "sha": "5ddfb670f4827bffa050dc17da3304192443462e",
       "status": "pendente",
-      "image": "https://raw.githubusercontent.com/carolinefreire/novelo/main/src/assets/hero-novelo.jpg",
-      "notes": ""
+      "image": null,
+      "notes": "",
+      "private_source": true
     }
   ]
 }
