@@ -1,22 +1,25 @@
-# Novelo · Site institucional de demonstração
+# Novelo · Site institucional (branch `apresentacao_novelo`)
 
-Esta pasta contém um **site de rolagem contínua**, não uma apresentação de slides.
-
-Abra `demo/index.html` em um navegador ou publique a pasta `demo/` em qualquer hospedagem estática. Todos os arquivos necessários estão na própria pasta e em `demo/assets/`. O site não precisa de backend nem autenticação.
+Esta pasta apresenta a Novelo como **site de rolagem contínua**, não como slides.
 
 ## Conteúdo
-- Contexto, Política Nacional de Cuidados e conceito da marca
-- Trama da Vida, Novelo da Vida Real e Novo Elo
-- Jornada da candidata, mockups, Voz que Cuida e recursos do app
-- Configuração das empresas, badges colaborativos, LGPD e permanência
-- Artes enviadas pela autora e personagens voluntários em arquivos separados, com transparência quando fornecida
+- Texto institucional aprovado: ideia, marca, princípios, funcionalidades, Trama da Vida, Novelo da Vida Real, Novo Elo, empresas, badges colaborativos, LGPD, empregabilidade e Política Nacional de Cuidados
+- Os mockups de telas anteriormente exibidos foram retirados da página
+- Personagens e voluntários individuais da curadoria, por referência aos arquivos aprovados do `ds_novelo`
+- Logo oficial priorizada pelo arquivo original de `carolinefreire/novelo`; há alternativa local em `assets/logo-novelo.png`
 
-## Estrutura
-- `index.html` — conteúdo e navegação
-- `styles.css` — layout responsivo e identidade visual
-- `script.js` — menu mobile, animações suaves e navegação das seções
-- `assets/` — recursos de imagem da demonstração
+## Arquivos
+- `demo/index.html` — página e conteúdo
+- `demo/styles.css` — estilo e responsividade
+- `demo/script.js` — menu mobile e animações
+- `demo/assets/` — imagens de demonstração e logo local
+- `../assets/` — voluntários aprovados do Design System
 
-A imagem de família usada na página veio dos arquivos encaminhados pela autora. A issue #10 do repositório `carolinefreire/novelo` permanece como pedido de revisão visual e não é tratada aqui como arte revisada e aprovada dessa issue.
+## Duas imagens aguardando o arquivo final
+1. `carinho_em_fios_coloridos.png`: arte identificada na curadoria pela autora. O arquivo original de alta qualidade ainda não foi identificado entre os binários no repositório. Não usar a versão anterior sem tecido como se fosse a aprovada.
+2. **Família da issue #10 (pai, mãe e criança)**: a aprovação consta em `data/acervo.json`, mas está marcada `aprovado_pendente_de_arquivo` (`path: null`). Não substituir pela cena de três gerações ou por outro casal e alegar que é o original.
 
-A branch `apresentacao_novelo` é independente de `main`. O site não é publicado automaticamente no GitHub Pages apenas por existir nesta branch.
+As artes acima só devem ser inseridas depois que os respectivos arquivos originais forem localizados ou sincronizados. A página não apresenta imagens incorretas como se fossem essas versões aprovadas.
+
+## Publicação
+A branch é separada de `main`. O GitHub Pages atual não publica automaticamente o conteúdo de `demo/` nesta branch. Para visualizar, use um servidor estático na raiz do repositório e abra `/demo/` ou faça o deploy de uma prévia da branch.
