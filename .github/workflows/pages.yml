@@ -7,6 +7,7 @@ on:
       - 'README.md'
       - 'index.html'
       - 'apresentacao.html'
+      - 'apresentacao/**'
       - 'apresentacao.css'
       - 'apresentacao.js'
       - 'apresentacao-data.js'
@@ -40,10 +41,11 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html apresentacao.html apresentacao.css apresentacao.js apresentacao-data.js curadoria.html styles.css curadoria.css app.js curadoria.js _site/
-          cp -R assets data _site/
+          cp -R assets data apresentacao _site/
           touch _site/.nojekyll
           test -s _site/index.html
           test -s _site/apresentacao.html
+          test -s _site/apresentacao/index.html
           test -s _site/apresentacao.css
           node --check _site/apresentacao.js
           node --check _site/apresentacao-data.js
