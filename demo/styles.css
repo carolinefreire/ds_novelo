@@ -127,7 +127,7 @@ h3{font-weight:900;font-size:clamp(1.3rem,1.8vw,1.7rem)}
  p,.split-section>div>p,.item-card p,.thread-card p{font-size:.96rem;line-height:1.72}
  .section-eyebrow{font-size:.7rem;letter-spacing:.13em}
  .hero-inner{padding-top:48px;padding-bottom:55px}
- .hero h1{font-size:clamp(2.6rem,11.6vw,4rem)}
+ .hero h1{font-size:clamp(2.15rem,10.1vw,3.7rem);overflow-wrap:break-word}
  .hero-lead{font-size:1.03rem}
  .hero-visual img{max-height:380px}
  .split-section{gap:24px}
