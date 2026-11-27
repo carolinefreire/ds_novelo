@@ -1,25 +1,24 @@
-# Novelo · Site institucional (branch `apresentacao_novelo`)
+# Novelo · site institucional revisado
 
-Esta pasta apresenta a Novelo como **site de rolagem contínua**, não como slides.
+Branch: `apresentacao_novelo` · página: `demo/index.html`.
 
-## Conteúdo
-- Texto institucional aprovado: ideia, marca, princípios, funcionalidades, Trama da Vida, Novelo da Vida Real, Novo Elo, empresas, badges colaborativos, LGPD, empregabilidade e Política Nacional de Cuidados
-- Os mockups de telas anteriormente exibidos foram retirados da página
-- Personagens e voluntários individuais da curadoria, por referência aos arquivos aprovados do `ds_novelo`
-- Logo oficial priorizada pelo arquivo original de `carolinefreire/novelo`; há alternativa local em `assets/logo-novelo.png`
+## Aplicação da revisão
+
+- Site de rolagem contínua, não uma sequência de slides
+- Texto fornecido pela autora preservado e formatado com hierarquia consistente
+- Grade repetida de Jornada/Acessibilidade/Benefícios removida de Novelo da Vida Real
+- Conceitos, princípios, candidatas, empresas, LGPD e governança em cartões harmonizados com a identidade Novelo e textura delicada inspirada em fios
+- Nenhuma tela de aplicativo é exibida
+- Seis voluntários individuais com fundos removidos tecnicamente, preservando o conteúdo visual da curadoria
+- Última ilustração de conteúdo: grupo de cuidado com pessoa em cadeira de rodas com assistência respiratória, proveniente de `demo/assets/grupo-cuidado.webp`
+- Família (pai, mãe e criança) da issue #10 e cena mãe/criança com tecido incluídas como **recortes fiéis das capturas fornecidas pela autora** (SVGs embutem WebP). Não são os arquivos originais em resolução máxima.
+- Logo oficial preservada. O espaço do container foi ampliado para evitar cortes adicionais. **O arquivo original da logo já corta o topo do “l”**; não foi desenhada uma extensão artificial.
 
 ## Arquivos
-- `demo/index.html` — página e conteúdo
-- `demo/styles.css` — estilo e responsividade
-- `demo/script.js` — menu mobile e animações
-- `demo/assets/` — imagens de demonstração e logo local
-- `../assets/` — voluntários aprovados do Design System
 
-## Duas imagens aguardando o arquivo final
-1. `carinho_em_fios_coloridos.png`: arte identificada na curadoria pela autora. O arquivo original de alta qualidade ainda não foi identificado entre os binários no repositório. Não usar a versão anterior sem tecido como se fosse a aprovada.
-2. **Família da issue #10 (pai, mãe e criança)**: a aprovação consta em `data/acervo.json`, mas está marcada `aprovado_pendente_de_arquivo` (`path: null`). Não substituir pela cena de três gerações ou por outro casal e alegar que é o original.
+- `index.html` — página institucional
+- `styles.css` — estilo responsivo e animações suaves
+- `script.js` — navegação e menu móvel
+- `assets/` — arte da curadoria, voluntários em SVG com imagem transparente e demais imagens aprovadas
 
-As artes acima só devem ser inseridas depois que os respectivos arquivos originais forem localizados ou sincronizados. A página não apresenta imagens incorretas como se fossem essas versões aprovadas.
-
-## Publicação
-A branch é separada de `main`. O GitHub Pages atual não publica automaticamente o conteúdo de `demo/` nesta branch. Para visualizar, use um servidor estático na raiz do repositório e abra `/demo/` ou faça o deploy de uma prévia da branch.
+As artes incorporadas não foram geradas. Os dois recortes oriundos de screenshots devem ser substituídos pelos arquivos originais aprovados quando estes forem disponibilizados. Para abrir pelo Android sem dependências de pastas, utilize também o HTML único distribuído no chat.
